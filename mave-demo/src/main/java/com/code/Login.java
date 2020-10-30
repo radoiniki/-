@@ -2,6 +2,7 @@ package com.code;
 import java.io.File;
 import java.net.URL;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -33,6 +34,7 @@ public class Login {
     private TextField username;
     @FXML
 	private Label label;
+    static Parent root1;
     @FXML
     void handlebuttonExit(ActionEvent event){
     	Stage stage = (Stage) exit.getScene().getWindow();
@@ -61,8 +63,10 @@ public class Login {
     			c.getConnection();
     			boolean flag = false;
 				if(c.validateLogin(username1,password1,label,flag)==true) {
+					LoginStart.close();
+					
 					FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Administrator.fxml"));
-	    		    Parent root1 = (Parent) fxmlLoader.load();
+	    		   root1 = (Parent) fxmlLoader.load();
 	    		    Stage stage = new Stage();
 	    		    stage.setScene(new Scene(root1));  
 	    		    stage.show();
@@ -73,7 +77,10 @@ catch (Exception e)
 	System.out.println(e);
 		}
     	 
-    }       
+    }   
+    public static void close() {
+    	((Stage)root1.getScene().getWindow()).close(); 
+    }
     }
    
     	
