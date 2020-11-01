@@ -1,6 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" />
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.code.Dostavchik">
+   <children>
+      <Label layoutX="61.0" layoutY="119.0" text="Name" />
+      <Label layoutX="59.0" layoutY="152.0" text="City" />
+      <Label layoutX="56.0" layoutY="183.0" text="Adress" />
+      <Label layoutX="49.0" layoutY="213.0" text="Phone" />
+      <Label layoutX="55.0" layoutY="247.0" text="E-mail" />
+      <TextField fx:id="textbox1" layoutX="102.0" layoutY="115.0" />
+      <TextField fx:id="textbox2" layoutX="102.0" layoutY="148.0" />
+      <TextField fx:id="textbox3" layoutX="102.0" layoutY="179.0" />
+      <TextField fx:id="textbox4" layoutX="102.0" layoutY="209.0" />
+      <TextField fx:id="textbox5" layoutX="102.0" layoutY="243.0" />
+      <TableView fx:id="table" layoutX="263.0" layoutY="100.0" prefHeight="232.0" prefWidth="457.0">
+        <columns>
+          <TableColumn fx:id="ime" editable="false" prefWidth="74.0" sortType="DESCENDING" text="Name" />
+          <TableColumn fx:id="grad" editable="false" prefWidth="76.0" sortType="DESCENDING" text="City" />
+            <TableColumn fx:id="adres" editable="false" prefWidth="75.0" sortType="DESCENDING" text="Adress" />
+            <TableColumn fx:id="telefon" editable="false" prefWidth="75.0" sortType="DESCENDING" text="Phone" />
+            <TableColumn fx:id="email" editable="false" prefWidth="75.0" sortType="DESCENDING" text="E-mail" />
+            <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
+        </columns>
+      </TableView>
+      <Button fx:id="button2" layoutX="120.0" layoutY="372.0" mnemonicParsing="false" onAction="#Add" prefHeight="38.0" prefWidth="97.0" text="Add New" />
+      <Label layoutX="111.0" layoutY="14.0" text="Въвеждане на Доставчик">
+         <font>
+            <Font size="45.0" />
+         </font>
+      </Label>
+      <Button fx:id="button1" layoutX="11.0" layoutY="372.0" mnemonicParsing="false" onAction="#Back" prefHeight="38.0" prefWidth="97.0" text="Back" />
+      <Button fx:id="button3" layoutX="236.0" layoutY="372.0" mnemonicParsing="false" onAction="#Edit" prefHeight="38.0" prefWidth="97.0" text="Edit by ID:" />
+      <Button fx:id="button4" layoutX="342.0" layoutY="372.0" mnemonicParsing="false" onAction="#Remove" prefHeight="38.0" prefWidth="97.0" text="Remove by ID:" />
+      <Label fx:id="label1" layoutX="95.0" layoutY="279.0" />
+      <TextField fx:id="textbox6" layoutX="492.0" layoutY="380.0" />
+      <Label layoutX="464.0" layoutY="380.0" prefHeight="22.0" prefWidth="28.0" text="ID:" />
+      <Button fx:id="button5" layoutX="634.0" layoutY="372.0" mnemonicParsing="false" onAction="#Exit" prefHeight="38.0" prefWidth="97.0" text="Exit" />
+   </children>
+</Pane>

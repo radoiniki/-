@@ -1,8 +1,4 @@
 package com.code;
-import java.io.File;
-import java.net.URL;
-
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -46,6 +42,7 @@ public class Login {
     	password.clear();
     	username.clear();
     }
+    boolean p=true;
     @FXML
     void handlebuttonLogin(ActionEvent event) {
     	  if (username.getText().isEmpty()) {
@@ -61,16 +58,17 @@ public class Login {
    LoginDao c = new LoginDao();
     	try {
     			c.getConnection();
-    			boolean flag = false;
+    			boolean flag = true;
 				if(c.validateLogin(username1,password1,label,flag)==true) {
-					LoginStart.close();
+					LoginStart.close();	
+						FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Administrator.fxml"));
+			    		   root1 = (Parent) fxmlLoader.load();
+			    		    Stage stage = new Stage();
+			    		    stage.setScene(new Scene(root1));  
+			    		    stage.show();   		   
+					}
 					
-					FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Administrator.fxml"));
-	    		   root1 = (Parent) fxmlLoader.load();
-	    		    Stage stage = new Stage();
-	    		    stage.setScene(new Scene(root1));  
-	    		    stage.show();
-				}
+				
     	}
 catch (Exception e)
 		{
@@ -81,6 +79,7 @@ catch (Exception e)
     public static void close() {
     	((Stage)root1.getScene().getWindow()).close(); 
     }
+		
     }
    
     	

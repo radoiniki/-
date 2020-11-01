@@ -1,6 +1,5 @@
 package com.code;
 
-import java.io.IOException;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -150,16 +149,24 @@ Platform.exit();
     @FXML
     void AddSupplier(ActionEvent event) {
     	try {		
-    		Login.close();
+    	 Login.close();
 				FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("VuvejdaneDostavchik.fxml"));
-    		    Parent root1 = (Parent) fxmlLoader.load();
-    		    Stage stage = new Stage();
-    		    stage.setScene(new Scene(root1));  
-    		    stage.show();
+	    		   root1 = (Parent) fxmlLoader.load();
+	    		    Stage stage = new Stage();
+	    		    stage.setScene(new Scene(root1));  
+	    		    stage.show();
+	    		   
+    	
 			}
 catch (Exception e)
 	{
 System.out.println(e);
 	}
     }
+    
+    static Parent root1;
+	public static void close() {
+		((Stage)root1.getScene().getWindow()).close();
+		
+	}
     }
