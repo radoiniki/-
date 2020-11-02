@@ -6,9 +6,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -133,11 +131,7 @@ ObservableList<DostavchikDao> oblist=FXCollections.observableArrayList();
 	    void Back(ActionEvent event) {
 	    	try {	
 	    	MainForm.close();
-	    			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Administrator.fxml"));
-	    		    root1 = (Parent) fxmlLoader.load();
-	    		    Stage stage = new Stage();
-	    		    stage.setScene(new Scene(root1));  
-	    		    stage.show();
+	    	Login.show();
 	    	}
 	catch (Exception e)
 		{

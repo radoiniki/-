@@ -79,6 +79,10 @@ catch (Exception e)
     public static void close() {
     	((Stage)root1.getScene().getWindow()).close(); 
     }
+	public static void show() {
+		((Stage)root1.getScene().getWindow()).show(); 
+		
+	}
 		
     }
    

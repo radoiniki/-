@@ -21,9 +21,9 @@
             </Button>
             <Pane fx:id="Pane2" layoutX="237.0" layoutY="62.0" prefHeight="323.0" prefWidth="204.0" visible="false">
                <children>
-                  <Button fx:id="button12" layoutY="39.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0" text="Въвеждане на клиент" />
-                  <Button fx:id="button13" layoutY="80.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0" text="Въвеждане на стоки" />
-                  <Button fx:id="button14" layoutY="119.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0" text="Въвеждане на каса" />
+                  <Button fx:id="button12" layoutY="39.0" mnemonicParsing="false" onAction="#AddClients" prefHeight="32.0" prefWidth="200.0" text="Въвеждане на клиент" />
+                  <Button fx:id="button13" layoutY="80.0" mnemonicParsing="false" onAction="#AddStocks" prefHeight="32.0" prefWidth="200.0" text="Въвеждане на стоки" />
+                  <Button fx:id="button14" layoutY="119.0" mnemonicParsing="false" onAction="#AddKasa" prefHeight="32.0" prefWidth="200.0" text="Въвеждане на каса" />
                   <Button fx:id="button11" mnemonicParsing="false" onAction="#AddSupplier" prefHeight="32.0" prefWidth="200.0" text="Въвеждане на доставчик" />
                   <Button fx:id="button15" layoutY="158.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0" text="Въвеждане на персонал" />
                   <Button fx:id="button16" layoutY="198.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0" text="Въвеждане на поръчки за склада" />

@@ -154,9 +154,7 @@ Platform.exit();
 	    		   root1 = (Parent) fxmlLoader.load();
 	    		    Stage stage = new Stage();
 	    		    stage.setScene(new Scene(root1));  
-	    		    stage.show();
-	    		   
-    	
+	    		    stage.show();	    		    	    		   
 			}
 catch (Exception e)
 	{
@@ -164,9 +162,55 @@ System.out.println(e);
 	}
     }
     
+    @FXML
+    void AddClients(ActionEvent event) {
+    	try {		
+       	 Login.close();
+   				FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("VuvejdaneKlient.fxml"));
+   	    		   root1 = (Parent) fxmlLoader.load();
+   	    		    Stage stage = new Stage();
+   	    		    stage.setScene(new Scene(root1));  
+   	    		    stage.show();	    		    	    		   
+   			}
+   catch (Exception e)
+   	{
+   System.out.println(e);
+   	}
+    }
+    
     static Parent root1;
 	public static void close() {
 		((Stage)root1.getScene().getWindow()).close();
 		
 	}
+	 @FXML
+	    void AddStocks(ActionEvent event) {
+		 try {		
+	       	 Login.close();
+	   				FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("VuvejdaneStoka.fxml"));
+	   	    		   root1 = (Parent) fxmlLoader.load();
+	   	    		    Stage stage = new Stage();
+	   	    		    stage.setScene(new Scene(root1));  
+	   	    		    stage.show();	    		    	    		   
+	   			}
+	   catch (Exception e)
+	   	{
+	   System.out.println(e);
+	   	}
+	 }
+	 @FXML
+	    void AddKasa(ActionEvent event) {
+		 try {		
+	       	 Login.close();
+	   				FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("VuvejdaneKasa.fxml"));
+	   	    		   root1 = (Parent) fxmlLoader.load();
+	   	    		    Stage stage = new Stage();
+	   	    		    stage.setScene(new Scene(root1));  
+	   	    		    stage.show();	    		    	    		   
+	   			}
+	   catch (Exception e)
+	   	{
+	   System.out.println(e);
+	   	}
+	    }
     }
