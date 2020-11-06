@@ -228,4 +228,19 @@ System.out.println(e);
 		   System.out.println(e);
 		   	}
 	    }
+	    @FXML
+	    void AddPSklad(ActionEvent event) {
+	    	try {		
+		       	 Login.close();
+		   				FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("VuvejdanePSklad.fxml"));
+		   	    		   root1 = (Parent) fxmlLoader.load();
+		   	    		    Stage stage = new Stage();
+		   	    		    stage.setScene(new Scene(root1));  
+		   	    		    stage.show();	    		    	    		   
+		   			}
+		   catch (Exception e)
+		   	{
+		   System.out.println(e);
+		   	}
+	    }
     }
