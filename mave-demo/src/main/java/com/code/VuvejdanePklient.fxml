@@ -8,11 +8,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="927.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.code.PSklad">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="991.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.code.Pklient">
    <children>
       <Label layoutX="37.0" layoutY="119.0" text="Stock Name" />
       <Label layoutX="54.0" layoutY="152.0" text="Date" />
-      <Label layoutX="20.0" layoutY="183.0" text="Supplier Name" />
+      <Label layoutX="28.0" layoutY="183.0" text="Staff Name" />
       <Label layoutX="38.0" layoutY="213.0" text="Price order" />
       <Label layoutX="20.0" layoutY="247.0" text="Stock Quantity" />
       <TextField fx:id="textbox1" layoutX="102.0" layoutY="115.0" />
@@ -20,20 +20,21 @@
       <TextField fx:id="textbox3" layoutX="102.0" layoutY="179.0" />
       <TextField fx:id="textbox4" layoutX="102.0" layoutY="209.0" />
       <TextField fx:id="textbox5" layoutX="102.0" layoutY="243.0" />
-      <TableView fx:id="table" layoutX="243.0" layoutY="97.0" prefHeight="321.0" prefWidth="663.0">
+      <TableView fx:id="table" layoutX="243.0" layoutY="97.0" prefHeight="324.0" prefWidth="740.0">
          <columns>
             <TableColumn fx:id="stockname" editable="false" prefWidth="84.0" sortType="DESCENDING" text="Stock Name" />
             <TableColumn fx:id="date" editable="false" prefWidth="66.0" sortType="DESCENDING" text="Date" />
-            <TableColumn fx:id="supname" editable="false" prefWidth="97.0" sortType="DESCENDING" text="Supplier Name" />
+            <TableColumn fx:id="supname" editable="false" prefWidth="97.0" sortType="DESCENDING" text="Staff Name" />
             <TableColumn fx:id="orderprice" editable="false" prefWidth="101.0" sortType="DESCENDING" text="Price order" />
             <TableColumn fx:id="quantity" editable="false" prefWidth="94.0" sortType="DESCENDING" text="Stock Quantity" />
             <TableColumn fx:id="priceach" minWidth="8.0" prefWidth="83.0" text="Price for each" />
             <TableColumn fx:id="id" minWidth="0.0" prefWidth="60.0" text="ID" />
             <TableColumn fx:id="name" prefWidth="75.0" text="Order Name" />
+            <TableColumn fx:id="clname" prefWidth="75.0" text="Client Name" />
          </columns>
       </TableView>
       <Button fx:id="button2" layoutX="128.0" layoutY="473.0" mnemonicParsing="false" onAction="#Add" prefHeight="38.0" prefWidth="97.0" text="Add New" />
-      <Label layoutX="111.0" layoutY="14.0" text="Въвеждане на Поръчка за склад">
+      <Label layoutX="111.0" layoutY="14.0" text="Въвеждане на Поръчка за клиент">
          <font>
             <Font size="45.0" />
          </font>
@@ -49,5 +50,7 @@
       <TextField fx:id="textbox7" layoutX="102.0" layoutY="282.0" />
       <TextField fx:id="textbox8" layoutX="102.0" layoutY="320.0" />
       <Label layoutX="22.0" layoutY="320.0" prefHeight="22.0" prefWidth="66.0" text="Order name" />
+      <TextField fx:id="textbox9" layoutX="102.0" layoutY="354.0" />
+      <Label layoutX="22.0" layoutY="358.0" prefHeight="14.0" prefWidth="66.0" text="Client Name" />
    </children>
 </Pane>

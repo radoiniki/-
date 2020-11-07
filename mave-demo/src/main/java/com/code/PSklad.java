@@ -10,6 +10,8 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -101,10 +103,20 @@ public class PSklad {
 	    	else {
 	    	 if(PSkladDao.insert(textbox2.getText(),textbox3.getText(),textbox4.getText(),textbox8.getText(),label1,flag)==true) {
 	    		
+	 	    }else {
+	 	    	 Alert a = new Alert(AlertType.WARNING);
+	 	    	a.setContentText("The information u add is incorrect! Please check your names");
+	 	    	a.show();
 	 	    }
 	 if(PSkladDao.insert1(textbox1.getText(),textbox8.getText(),textbox5.getText(),textbox7.getText(),label1,flag)==true) {
 	
-	 }
+	 }else {
+	    	 Alert a = new Alert(AlertType.WARNING);
+	    	a.setContentText("The information u add is incorrect! Please check your names");
+	    	a.show();
+	    }
+	 if(PSkladDao.update2(textbox5.getText(),textbox8.getText(),label1,flag)==true) {
+   	 }
 	    	}
 	    	
 	    }
@@ -118,17 +130,33 @@ public class PSklad {
 
     @FXML
     void Back(ActionEvent event) {
-
+    	try {	
+	    	MainForm.close();
+	    	Login.show();
+	    	}
+	catch (Exception e)
+		{
+	System.out.println(e);
+		}
     }
 
-    @FXML
-    void Check(ActionEvent event) {
-
-    }
 
     @FXML
     void Edit(ActionEvent event) {
-
+    	boolean flag=false;
+   	 try {
+   	 if(PSkladDao.update(textbox2.getText(),textbox3.getText(),textbox4.getText(),textbox8.getText(),Integer.parseInt(textbox6.getText()),label1,flag)==true) {
+   		 
+   	 }
+   	 if(PSkladDao.update1(textbox1.getText(),textbox5.getText(),textbox7.getText(),Integer.parseInt(textbox6.getText()),label1,flag)==true) {
+   	 }
+   	 }
+	    catch (Exception e)
+	    		{
+	    	System.out.println(e);
+	    		
+    }
+	    initialize();
     }
 
     @FXML
@@ -138,7 +166,22 @@ Platform.exit();
 
     @FXML
     void Remove(ActionEvent event) {
-
+    	boolean flag=false;
+     	 try {
+     	    	
+     	 if(PSkladDao.delete1(Integer.parseInt(textbox6.getText()),label1,flag)==true) {
+     		 
+     	 }
+     	 if(PSkladDao.delete(Integer.parseInt(textbox6.getText()),label1,flag)==true) {
+     		 
+     	 }
+     	 }
+  	    catch (Exception e)
+  	    		{
+  	    	System.out.println(e);
+  	    		
+      }
+  	    initialize();
     }
     ObservableList<PSkladDao> oblist=FXCollections.observableArrayList();
   void initialize() {

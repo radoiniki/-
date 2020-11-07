@@ -243,4 +243,19 @@ System.out.println(e);
 		   System.out.println(e);
 		   	}
 	    }
+	    @FXML
+	    void AddPKlient(ActionEvent event) {
+	    	try {		
+		       	 Login.close();
+		   				FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("VuvejdanePklient.fxml"));
+		   	    		   root1 = (Parent) fxmlLoader.load();
+		   	    		    Stage stage = new Stage();
+		   	    		    stage.setScene(new Scene(root1));  
+		   	    		    stage.show();	    		    	    		   
+		   			}
+		   catch (Exception e)
+		   	{
+		   System.out.println(e);
+		   	}
+	    }
     }

@@ -102,6 +102,7 @@ public class PSkladDao {
 			    		}
 		return flag;
 	}
+
 	public static boolean select(String name,Label label1,boolean flag) {
 		   try {
 			 Connection com= DostavchikDao.getConnection();
@@ -122,4 +123,109 @@ public class PSkladDao {
 			    		}
 		return flag;
 	}
+	public static boolean delete(int id1,Label label1,boolean flag) {
+		   try {
+			 Connection com= DostavchikDao.getConnection();
+				Statement st=com.createStatement();
+				ResultSet rs=st.executeQuery("Delete from warehouse_orders where worder_id='"+id1+"'");
+				if (rs.next())  
+				{
+				    label1.setText("Deleted");
+				    flag=true;
+				}else {
+					label1.setText("Not Deleted");
+					flag=false;
+				}
+			   	}
+			    catch (Exception e)
+			    		{
+			    	System.out.println(e);
+			    		}
+		return flag;
+	}
+	public static boolean delete1(int id1,Label label1,boolean flag) {
+		   try {
+			 Connection com= DostavchikDao.getConnection();
+				Statement st=com.createStatement();
+				ResultSet rs=st.executeQuery("Delete from worder_price where warehouse_orders_worder_id='"+id1+"'");
+				if (rs.next())  
+				{
+				    label1.setText("Deleted");
+				    flag=true;
+				}else {
+					label1.setText("Not Deleted");
+					flag=false;
+				}
+			   	}
+			    catch (Exception e)
+			    		{
+			    	System.out.println(e);
+			    		}
+		return flag;
+	}
+	public static boolean update(String date,String supname, String priceorder, String ordername,int id1,Label label1,boolean flag) {
+		   try {
+			 Connection com= DostavchikDao.getConnection();
+				Statement st=com.createStatement();
+				ResultSet rs=st.executeQuery("update warehouse_orders set worder_date='"+date+"',sup_id=(Select sup_id from suppliers where sup_name='"+supname+"'),worder_total='"+priceorder+"',worder_name='"+ordername+"' where worder_id='"+id1+"'");
+				if (rs.next())  
+				{
+				    label1.setText("Updated");
+				    flag=true;
+				}else {
+					label1.setText("Not Updated");
+					flag=false;
+				}
+			   	}
+			    catch (Exception e)
+			    		{
+			    	System.out.println(e);
+			    		}
+		return flag;
+	}
+	public static boolean update1(String stockname, String quantity, String priceeach,int id1,Label label1,boolean flag) {
+		Integer p=Integer.parseInt(quantity)*Integer.parseInt(priceeach);
+		String price=p.toString();
+		   try {
+			 Connection com= DostavchikDao.getConnection();
+				Statement st=com.createStatement();
+				ResultSet rs=st.executeQuery("update worder_price set stocks_st_id=(Select st_id from stocks where st_name='"+stockname+"'),w_quantity='"+quantity+"',w_price_each='"+priceeach+"',w_price='"+price+"' where warehouse_orders_worder_id='"+id1+"'");
+				if (rs.next())  
+				{
+				    label1.setText("Updated");
+				    flag=true;
+				}else {
+					label1.setText("Not Updated");
+					flag=false;
+				}
+			   	}
+			    catch (Exception e)
+			    		{
+			    	System.out.println(e);
+			    		}
+		return flag;
+	}
+	public static boolean update2(String quantity,String wordername,Label label1,boolean flag) {
+		   try {
+			 Connection com= DostavchikDao.getConnection();
+				Statement st=com.createStatement();
+				ResultSet rs=st.executeQuery("update stocks set st_quantity=st_quantity+'"+quantity+"' where st_id=(Select stocks_st_id from worder_price where warehouse_orders_worder_id=(Select worder_id from warehouse_orders where worder_name='"+wordername+"'))");
+				if (rs.next())  
+				{
+				    label1.setText("Updated");
+				    flag=true;
+				}else {
+					label1.setText("Not Updated");
+					flag=false;
+				}
+				 com.setAutoCommit(false);
+			   	}
+			    catch (Exception e)
+			    		{
+			    	System.out.println(e);
+			    		}
+		
+		return flag;
+	}
+	
 }

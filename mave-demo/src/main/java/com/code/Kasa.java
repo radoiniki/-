@@ -1,11 +1,9 @@
 package com.code;
 
-import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ResourceBundle;
 
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
