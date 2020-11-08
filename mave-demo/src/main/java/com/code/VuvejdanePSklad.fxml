@@ -49,5 +49,6 @@
       <TextField fx:id="textbox7" layoutX="102.0" layoutY="282.0" />
       <TextField fx:id="textbox8" layoutX="102.0" layoutY="320.0" />
       <Label layoutX="22.0" layoutY="320.0" prefHeight="22.0" prefWidth="66.0" text="Order name" />
+      <Button layoutX="102.0" layoutY="361.0" mnemonicParsing="false" onAction="#Izpisvane" prefHeight="22.0" prefWidth="133.0" text="Приемане на стоката" />
    </children>
 </Pane>

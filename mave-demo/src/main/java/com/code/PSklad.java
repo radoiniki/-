@@ -98,7 +98,9 @@ public class PSklad {
     	boolean flag=false;
 	    try {
 	    	if(PSkladDao.select(textbox8.getText(),label1,flag)==true) {
-	    
+	    		Alert a = new Alert(AlertType.INFORMATION);
+	 	    	a.setContentText("There is a order with that name! Please add another name for orders.");
+	 	    	a.show();
 	    	}
 	    	else {
 	    	 if(PSkladDao.insert(textbox2.getText(),textbox3.getText(),textbox4.getText(),textbox8.getText(),label1,flag)==true) {
@@ -115,8 +117,6 @@ public class PSklad {
 	    	a.setContentText("The information u add is incorrect! Please check your names");
 	    	a.show();
 	    }
-	 if(PSkladDao.update2(textbox5.getText(),textbox8.getText(),label1,flag)==true) {
-   	 }
 	    	}
 	    	
 	    }
@@ -127,7 +127,13 @@ public class PSklad {
     }
 	    initialize();
     }
-
+    @FXML
+    void Izpisvane(ActionEvent event) {
+    	boolean flag=false;
+   	 if(PSkladDao.update2(textbox5.getText(),textbox8.getText(),label1,flag)==true) {
+   	 }
+    }
+    
     @FXML
     void Back(ActionEvent event) {
     	try {	
