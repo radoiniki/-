@@ -10,8 +10,20 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-public class Login {
-    @FXML
+public class Login{
+    public PasswordField getPassword() {
+		return password;
+	}
+	public void setPassword(PasswordField password) {
+		this.password = password;
+	}
+	public TextField getUsername() {
+		return username;
+	}
+	public void setUsername(TextField username) {
+		this.username = username;
+	}
+	@FXML
     private Pane pane;
 
     @FXML
@@ -24,10 +36,10 @@ public class Login {
     private Button exit;
 
     @FXML
-    private PasswordField password;
+    public PasswordField password;
 
     @FXML
-    private TextField username;
+    public TextField username;
     @FXML
 	private Label label;
     static Parent root1;
@@ -42,32 +54,39 @@ public class Login {
     	password.clear();
     	username.clear();
     }
-    boolean p=true;
+    boolean flag=false;
     @FXML
     void handlebuttonLogin(ActionEvent event) {
-    	  if (username.getText().isEmpty()) {
+    	  String username1=username.getText();
+   	   String password1=password.getText();
+    	  if (username1.isEmpty()) {
              label.setText("Please enter your username");
-              return;
           }
-          if (password.getText().isEmpty()) {
+          if (password1.isEmpty()) {
              label.setText("Please enter a password");
-              return;
           }
-   String username1=username.getText();
-   String password1=password.getText();
-   LoginDao c = new LoginDao();
+          LoginDao c = new LoginDao();
     	try {
-    			c.getConnection();
-    			boolean flag = true;
-				if(c.validateLogin(username1,password1,label,flag)==true) {
+    			c.getConnection();				
+				if(c.validateLogin(username1,password1,label,flag)==true) {	
+					if(c.validateLogin1(username1, password1, label, flag)==true)
+					{
 					LoginStart.close();	
 						FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Administrator.fxml"));
 			    		   root1 = (Parent) fxmlLoader.load();
 			    		    Stage stage = new Stage();
-			    		    stage.setScene(new Scene(root1));  
-			    		    stage.show();   		   
+			    		    stage.setScene(new Scene(root1)); 
+			    		    stage.show();  
+					}else {
+						LoginStart.close();	
+						FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Administrator2.fxml"));
+			    		   root1 = (Parent) fxmlLoader.load();
+			    		    Stage stage = new Stage();
+			    		    stage.setScene(new Scene(root1)); 
+			    		    stage.show();  
 					}
-					
+			    		
+					}
 				
     	}
 catch (Exception e)
@@ -83,8 +102,8 @@ catch (Exception e)
 		((Stage)root1.getScene().getWindow()).show(); 
 		
 	}
-		
-    }
+}
+
    
     	
    

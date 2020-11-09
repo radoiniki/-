@@ -11,7 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-public class MainForm {
+public class MainForm extends Login{
 
     @FXML
     private Pane Pane;
@@ -43,7 +43,7 @@ public class MainForm {
     @FXML
     private Button button16;
 
-    @FXML
+    @FXML 
     private Button button17;
 
     @FXML
@@ -248,6 +248,21 @@ System.out.println(e);
 	    	try {		
 		       	 Login.close();
 		   				FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("VuvejdanePklient.fxml"));
+		   	    		   root1 = (Parent) fxmlLoader.load();
+		   	    		    Stage stage = new Stage();
+		   	    		    stage.setScene(new Scene(root1));  
+		   	    		    stage.show();	    		    	    		   
+		   			}
+		   catch (Exception e)
+		   	{
+		   System.out.println(e);
+		   	}
+	    }
+	    @FXML
+	    void AddSOperator(ActionEvent event) {
+	    	try {		
+		       	 Login.close();
+		   				FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("VuvejdaneSOperator.fxml"));
 		   	    		   root1 = (Parent) fxmlLoader.load();
 		   	    		    Stage stage = new Stage();
 		   	    		    stage.setScene(new Scene(root1));  

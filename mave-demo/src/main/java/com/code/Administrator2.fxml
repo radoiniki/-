@@ -28,7 +28,7 @@
                   <Button fx:id="button15" layoutY="158.0" mnemonicParsing="false" onAction="#AddStaff" prefHeight="32.0" prefWidth="200.0" text="Въвеждане на персонал" />
                   <Button fx:id="button16" layoutY="198.0" mnemonicParsing="false" onAction="#AddPSklad" prefHeight="32.0" prefWidth="200.0" text="Въвеждане на поръчки за склада" />
                   <Button fx:id="button17" layoutY="242.0" mnemonicParsing="false" onAction="#AddPKlient" prefHeight="32.0" prefWidth="200.0" text="Въвеждане на поръчки за клиенти" />
-                  <Button fx:id="button18" layoutY="282.0" mnemonicParsing="false" onAction="#AddSOperator" prefHeight="32.0" prefWidth="200.0" text="Въвеждане на складови оператори" />
+                  <Button fx:id="button18" layoutY="282.0" mnemonicParsing="false" onAction="#AddSOperator" prefHeight="32.0" prefWidth="200.0" text="Въвеждане на складови оператори" visible="false" />
                </children>
             </Pane>
             <Button fx:id="button2" layoutX="3.0" layoutY="145.0" mnemonicParsing="false" onAction="#showPane2" prefHeight="59.0" prefWidth="227.0" text="Работа с фактури">
@@ -73,7 +73,7 @@
                   <Button fx:id="button41" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0" text="За доставки и доставчици" />
                   <Button fx:id="button42" layoutY="38.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0" text="За клиенти" />
                   <Button fx:id="button43" layoutY="78.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0" text="Приходи,разходи,Печалба" />
-                  <Button fx:id="button46" layoutX="209.0" layoutY="78.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0" text="Дейност на СО" />
+                  <Button fx:id="button46" layoutX="209.0" layoutY="78.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0" text="Дейност на СО" visible="false" />
                   <Button fx:id="button45" layoutX="209.0" layoutY="38.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0" text="Движение на парите" />
                   <Button fx:id="button44" layoutX="209.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0" text="За наличности в склада" />
                </children>

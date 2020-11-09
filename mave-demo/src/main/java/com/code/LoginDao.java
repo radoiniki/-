@@ -7,7 +7,7 @@ import java.sql.Statement;
 import javafx.scene.control.Label;
 
 
-public class LoginDao {
+public class LoginDao extends MainForm{
 	public Connection getConnection() {
 	Connection com = null;
 	try {
@@ -40,7 +40,22 @@ public class LoginDao {
 			System.out.println(e);
 		}
 		return flag;
-		
+	
 	}
+	public boolean validateLogin1(String username1,String password1,Label label,boolean flag) {
+		if(username1.equals("admin") && password1.contentEquals("admin"))
+		{
+    			label.setText("Logged in as Administrator!");
+    			flag=true;   			
+    		}
+    		else {
+    			label.setText("Logged in as User!");
+    			flag=false;
+            }
+		return flag;
+		}
+	
+
 
 }
+
