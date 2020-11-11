@@ -10,14 +10,17 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 public class Stoka {
+
 
     @FXML
     private TextField textbox1;
@@ -29,12 +32,6 @@ public class Stoka {
     private TextField textbox3;
 
     @FXML
-    private TextField textbox4;
-
-    @FXML
-    private TextField textbox5;
-
-    @FXML
     private TableView<StokaDao> table;
 
     @FXML
@@ -44,13 +41,7 @@ public class Stoka {
     private TableColumn<StokaDao, String> expdate;
 
     @FXML
-    private TableColumn<StokaDao, String> adres;
-
-    @FXML
-    private TableColumn<StokaDao, String> telefon;
-
-    @FXML
-    private TableColumn<StokaDao, String> email;
+    private TableColumn<StokaDao, String> quantity;
 
     @FXML
     private TableColumn<StokaDao, String> id;
@@ -80,17 +71,26 @@ public class Stoka {
     void Add(ActionEvent event) {
     	boolean flag=false;
 	    try {
-	
+	    	if(textbox1.getText().isEmpty() || textbox2.getText().isEmpty() ||textbox3.getText().isEmpty()) {
+	      		 Alert a = new Alert(AlertType.WARNING);
+	      	    	a.setContentText("Empty textfield");
+	      	    	a.show();
+	      	}
+	    if(StokaDao.select(textbox1.getText(),label1,flag)==true) {
 	    
-	 if(StokaDao.insert(textbox1.getText(),textbox2.getText(),label1,flag)==true) {
+	    }
+	    else if(StokaDao.select(textbox1.getText(),label1,flag)==false) {
+	 if(StokaDao.insert(textbox1.getText(),textbox2.getText(),Integer.parseInt(textbox3.getText()),label1,flag)==true) {
 		
 	 }
+	    }
 	    }
 	    catch (Exception e)
 	    		{
 	    	System.out.println(e);
 	    		
     }
+	   
 	    initialize();
     }
 
@@ -111,7 +111,7 @@ public class Stoka {
     	boolean flag=false;
     	 try {
     	    	
-    	 if(StokaDao.update(textbox1.getText(),textbox2.getText(),Integer.parseInt(textbox6.getText()),label1,flag)==true) {
+    	 if(StokaDao.update(textbox1.getText(),textbox2.getText(),Integer.parseInt(textbox3.getText()),Integer.parseInt(textbox6.getText()),label1,flag)==true) {
     		 
     	 }
     	 }
@@ -135,6 +135,8 @@ public class Stoka {
       	    	
       	 if(StokaDao.delete(Integer.parseInt(textbox6.getText()),label1,flag)==true) {
       		 
+      	 }else {
+      		 label1.setText("Delete PSklad and PKlient with that stock");
       	 }
       	 }
    	    catch (Exception e)
@@ -154,7 +156,7 @@ public class Stoka {
 			while (rs.next())  
 			{
 			
-				oblist.add(new StokaDao(rs.getString("st_name"),rs.getString("st_expdate"),Integer.parseInt(rs.getString("st_id"))));
+				oblist.add(new StokaDao(Integer.parseInt(rs.getString("st_quantity")),rs.getString("st_name"),rs.getString("st_expdate"),Integer.parseInt(rs.getString("st_id"))));
 			 
 			}
 			
@@ -164,6 +166,7 @@ public class Stoka {
 		}
 		ime.setCellValueFactory(new PropertyValueFactory<>("ime1"));
 	    expdate.setCellValueFactory(new PropertyValueFactory<>("expDate1"));
+	    quantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
 	    id.setCellValueFactory(new PropertyValueFactory<>("id1"));
 	    table.setItems(oblist);
 	}

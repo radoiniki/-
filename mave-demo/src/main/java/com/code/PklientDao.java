@@ -223,13 +223,74 @@ public static boolean update2(String quantity,String wordername,Label label1,boo
 				label1.setText("Not Updated");
 				flag=false;
 			}
-			 com.setAutoCommit(false);
 		   	}
 		    catch (Exception e)
 		    		{
 		    	System.out.println(e);
 		    		}
 	
+	return flag;
+}
+public static boolean updatemoney(String priceorder,Label label1,boolean flag) {
+	   try {
+		 Connection com= DostavchikDao.getConnection();
+			Statement st=com.createStatement();
+			ResultSet rs=st.executeQuery("update moneydesk set money_costs=money_costs+'"+priceorder+"' where money_id='"+1+"'");
+			if (rs.next())  
+			{
+			    label1.setText("Updated");
+			    flag=true;
+			}else {
+				label1.setText("Not Updated");
+				flag=false;
+			}
+		   	}
+		    catch (Exception e)
+		    		{
+		    	System.out.println(e);
+		    		}
+	
+	return flag;
+}
+public static boolean updatemoney1(String name,Label label1,boolean flag) {
+	   try {
+		 Connection com= DostavchikDao.getConnection();
+			Statement st=com.createStatement();
+			ResultSet rs=st.executeQuery("update moneydesk set money_costs=money_costs+(Select price from corder_price where client_orders_corder_id=(Select corder_id from client_orders where corder_name='"+name+"')) where money_id='"+1+"'");
+			if (rs.next())  
+			{
+			    label1.setText("Updated");
+			    flag=true;
+			}else {
+				label1.setText("Not Updated");
+				flag=false;
+			}
+		   	}
+		    catch (Exception e)
+		    		{
+		    	System.out.println(e);
+		    		}
+	
+	return flag;
+}
+public static boolean updatekasa(Label label1,boolean flag) {
+	 try {
+		 Connection com= DostavchikDao.getConnection();
+			Statement st=com.createStatement();
+			ResultSet rs=st.executeQuery("update moneydesk set money_profit=money_income-money_costs where money_id='"+1+"'");
+			if (rs.next())  
+			{
+			    label1.setText("Updated");
+			    flag=true;
+			}else {
+				label1.setText("Not Updated");
+				flag=false;
+			}
+		   	}
+		    catch (Exception e)
+		    		{
+		    	System.out.println(e);
+		    		}
 	return flag;
 }
 }

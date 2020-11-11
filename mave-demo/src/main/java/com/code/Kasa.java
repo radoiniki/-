@@ -10,11 +10,13 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 public class Kasa {
@@ -63,19 +65,25 @@ public class Kasa {
     private Label label1;
 
     @FXML
-    private TextField textbox6;
-
-    @FXML
     private Button button5;
 
     @FXML
     void Add(ActionEvent event) {
     	boolean flag=false;
 	    try {
-	
+	if(textbox1.getText().isEmpty() || textbox2.getText().isEmpty() || textbox4.getText().isEmpty()) {
+		 Alert a = new Alert(AlertType.WARNING);
+	    	a.setContentText("Empty textfield");
+	    	a.show();
+	}
+
 	    
 	 if(KasaDao.insert(textbox1.getText(),textbox2.getText(),textbox4.getText(),label1,flag)==true) {
 		
+	 }else {
+		 Alert a = new Alert(AlertType.WARNING);
+	    	a.setContentText("Cant't have more than one moneydesk");
+	    	a.show();
 	 }
 	    }
 	    catch (Exception e)
@@ -103,7 +111,7 @@ public class Kasa {
     	boolean flag=false;
     	 try {
     	    	
-    	 if(KasaDao.update(textbox1.getText(),textbox2.getText(),textbox4.getText(),Integer.parseInt(textbox6.getText()),label1,flag)==true) {
+    	 if(KasaDao.update(textbox1.getText(),textbox2.getText(),textbox4.getText(),label1,flag)==true) {
     		 
     	 }
     	 }
@@ -123,7 +131,7 @@ Platform.exit();
     	boolean flag=false;
       	 try {
       	    	
-      	 if(KasaDao.delete(Integer.parseInt(textbox6.getText()),label1,flag)==true) {
+      	 if(KasaDao.delete(label1,flag)==true) {
       		 
       	 }
       	 }
@@ -145,7 +153,7 @@ Platform.exit();
  			while (rs.next())  
  			{
  			
- 				oblist.add(new KasaDao(rs.getString("money_income"),rs.getString("money_costs"),rs.getString("money_profit"),rs.getString("money_date"),Integer.parseInt(rs.getString("money_id"))));
+ 				oblist.add(new KasaDao(rs.getString("money_income"),rs.getString("money_costs"),rs.getString("money_profit"),rs.getString("money_date")));
  			 
  			}
  			
@@ -157,12 +165,12 @@ Platform.exit();
  	    grad.setCellValueFactory(new PropertyValueFactory<>("costs"));
  	    adres.setCellValueFactory(new PropertyValueFactory<>("date"));
  	    telefon.setCellValueFactory(new PropertyValueFactory<>("profit"));
- 	    id.setCellValueFactory(new PropertyValueFactory<>("id1"));
  	    table.setItems(oblist);
 
     }
     @FXML
     void refresh(ActionEvent event) {
+    	
 initialize();
     }
 }

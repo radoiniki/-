@@ -16,13 +16,12 @@
       <TextField fx:id="textbox1" layoutX="102.0" layoutY="115.0" />
       <TextField fx:id="textbox2" layoutX="102.0" layoutY="148.0" />
       <TextField fx:id="textbox4" layoutX="102.0" layoutY="181.0" />
-      <TableView fx:id="table" layoutX="263.0" layoutY="100.0" prefHeight="232.0" prefWidth="457.0">
+      <TableView fx:id="table" layoutX="263.0" layoutY="100.0" prefHeight="223.0" prefWidth="303.0">
          <columns>
             <TableColumn fx:id="ime" editable="false" prefWidth="74.0" sortType="DESCENDING" text="Income" />
             <TableColumn fx:id="grad" editable="false" prefWidth="76.0" sortType="DESCENDING" text="Costs" />
             <TableColumn fx:id="adres" editable="false" prefWidth="75.0" sortType="DESCENDING" text="Profit" />
             <TableColumn fx:id="telefon" editable="false" prefWidth="75.0" sortType="DESCENDING" text="Date" />
-            <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
          </columns>
       </TableView>
       <Button fx:id="button2" layoutX="120.0" layoutY="372.0" mnemonicParsing="false" onAction="#Add" prefHeight="38.0" prefWidth="97.0" text="Add New" />
@@ -32,12 +31,10 @@
          </font>
       </Label>
       <Button fx:id="button1" layoutX="11.0" layoutY="372.0" mnemonicParsing="false" onAction="#Back" prefHeight="38.0" prefWidth="97.0" text="Back" />
-      <Button fx:id="button3" layoutX="236.0" layoutY="372.0" mnemonicParsing="false" onAction="#Edit" prefHeight="38.0" prefWidth="97.0" text="Edit by ID:" />
-      <Button fx:id="button4" layoutX="342.0" layoutY="372.0" mnemonicParsing="false" onAction="#Remove" prefHeight="38.0" prefWidth="97.0" text="Remove by ID:" />
+      <Button fx:id="button3" layoutX="236.0" layoutY="372.0" mnemonicParsing="false" onAction="#Edit" prefHeight="38.0" prefWidth="97.0" text="Edit" />
+      <Button fx:id="button4" layoutX="342.0" layoutY="372.0" mnemonicParsing="false" onAction="#Remove" prefHeight="38.0" prefWidth="97.0" text="Remove" />
       <Label fx:id="label1" layoutX="95.0" layoutY="279.0" />
-      <TextField fx:id="textbox6" layoutX="492.0" layoutY="380.0" />
-      <Label layoutX="464.0" layoutY="380.0" prefHeight="22.0" prefWidth="28.0" text="ID:" />
-      <Button fx:id="button5" layoutX="634.0" layoutY="372.0" mnemonicParsing="false" onAction="#Exit" prefHeight="38.0" prefWidth="97.0" text="Exit" />
+      <Button fx:id="button5" layoutX="612.0" layoutY="372.0" mnemonicParsing="false" onAction="#Exit" prefHeight="38.0" prefWidth="97.0" text="Exit" />
       <Button layoutX="601.0" layoutY="49.0" mnemonicParsing="false" onAction="#refresh" prefHeight="38.0" prefWidth="97.0" text="Refresh" />
    </children>
 </Pane>

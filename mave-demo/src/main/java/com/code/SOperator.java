@@ -94,6 +94,11 @@ public class SOperator {
     @FXML
     void Add(ActionEvent event) {
     	boolean flag=false;
+    	if(textbox1.getText().isEmpty() || textbox2.getText().isEmpty() ||textbox3.getText().isEmpty() || textbox4.getText().isEmpty() || textbox5.getText().isEmpty()|| textbox7.getText().isEmpty()|| textbox8.getText().isEmpty()) {
+      		 Alert a = new Alert(AlertType.WARNING);
+      	    	a.setContentText("Empty textfield");
+      	    	a.show();
+      	}
 if(SOperatorDao.select(textbox5.getText(),label1,flag)==true) {
     		
  	    }

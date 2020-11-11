@@ -10,12 +10,13 @@ import java.sql.Statement;
 public class DostavchikDao {
 	 
 	public DostavchikDao(String string, String string2, String string3, String string4, String string5,int integer) {
-		ime1=string;
-		grad1=string2;
-		adres1=string3;
-		telefon1=string4;
-		email1=string5;
-		id1=integer;
+		super();
+		this.ime1=string;
+		this.grad1=string2;
+		this.adres1=string3;
+		this.telefon1=string4;
+		this.email1=string5;
+		this.id1=integer;
 	}
 	public  String getIme1() {
 		return ime1;

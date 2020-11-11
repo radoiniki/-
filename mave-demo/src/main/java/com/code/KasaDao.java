@@ -17,21 +17,17 @@ public class KasaDao {
 	public String getDate() {
 		return date;
 	}
-	public int getId1() {
-		return id1;
-	}
 	public String getProfit() {
 		return profit;
 	}
 
 
-	public KasaDao(String income, String costs, String date, String profit, int id1) {
+	public KasaDao(String income, String costs, String date, String profit) {
 		super();
 		this.income = income;
 		this.costs = costs;
 		this.date = date;
 		this.profit = profit;
-		this.id1 = id1;
 	}
 
 
@@ -46,7 +42,7 @@ String profit=p.toString();
 	   try {
 		 Connection com= DostavchikDao.getConnection();
 			Statement st=com.createStatement();
-			ResultSet rs=st.executeQuery("Insert into moneydesk (money_income,money_costs,money_profit,money_date) values ('"+income+"','"+costs+"','"+profit+"','"+date+"')");
+			ResultSet rs=st.executeQuery("Insert into moneydesk (money_income,money_costs,money_profit,money_date,money_id) values ('"+income+"','"+costs+"','"+profit+"','"+date+"','"+1+"')");
 			if (rs.next())  
 			{
 			    label1.setText("Inserted");
@@ -62,11 +58,11 @@ String profit=p.toString();
 		    		}
 	return flag;
 }
-public static boolean delete(int id1,Label label1,boolean flag) {
+public static boolean delete(Label label1,boolean flag) {
 	   try {
 		 Connection com= DostavchikDao.getConnection();
 			Statement st=com.createStatement();
-			ResultSet rs=st.executeQuery("Delete from moneydesk where money_id='"+id1+"'");
+			ResultSet rs=st.executeQuery("Delete from moneydesk where money_id='"+1+"'");
 			if (rs.next())  
 			{
 			    label1.setText("Deleted");
@@ -82,13 +78,13 @@ public static boolean delete(int id1,Label label1,boolean flag) {
 		    		}
 	return flag;
 }
-public static boolean update(String income,String costs,String date,int id1,Label label1,boolean flag) {
+public static boolean update(String income,String costs,String date,Label label1,boolean flag) {
 	Double p=Double.parseDouble(income)-Double.parseDouble(costs);
 	String profit=p.toString();
 	   try {
 		 Connection com= DostavchikDao.getConnection();
 			Statement st=com.createStatement();
-			ResultSet rs=st.executeQuery("update moneydesk set money_income='"+income+"',money_costs='"+costs+"',money_profit='"+profit+"',money_date='"+date+"' where money_id='"+id1+"'");
+			ResultSet rs=st.executeQuery("update moneydesk set money_income='"+income+"',money_costs='"+costs+"',money_profit='"+profit+"',money_date='"+date+"' where money_id='"+1+"'");
 			if (rs.next())  
 			{
 			    label1.setText("Updated");
@@ -104,6 +100,5 @@ public static boolean update(String income,String costs,String date,int id1,Labe
 		    		}
 	return flag;
 }
-
 
 }

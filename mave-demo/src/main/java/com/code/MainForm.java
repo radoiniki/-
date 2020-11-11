@@ -7,11 +7,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-public class MainForm extends Login{
+public class MainForm{
 
     @FXML
     private Pane Pane;
@@ -272,5 +274,17 @@ System.out.println(e);
 		   	{
 		   System.out.println(e);
 		   	}
+	    }
+	    @FXML
+	    void nalichnoststoka(ActionEvent event) {
+	    	Alert a = new Alert(AlertType.INFORMATION);
+ 	    	a.setContentText("Stocks are:"+MainFromDao.stocks());
+ 	    	a.show();
+	    }
+	    @FXML
+	    void nalichnostpari(ActionEvent event) {
+	    	Alert a = new Alert(AlertType.INFORMATION);
+ 	    	a.setContentText("Money are:"+MainFromDao.pari());
+ 	    	a.show();
 	    }
     }

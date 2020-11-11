@@ -97,6 +97,11 @@ public class PSklad {
     void Add(ActionEvent event) {
     	boolean flag=false;
 	    try {
+	    	if(textbox1.getText().isEmpty() || textbox2.getText().isEmpty() ||textbox3.getText().isEmpty() || textbox4.getText().isEmpty() || textbox5.getText().isEmpty()|| textbox7.getText().isEmpty()|| textbox8.getText().isEmpty()) {
+	      		 Alert a = new Alert(AlertType.WARNING);
+	      	    	a.setContentText("Empty textfield");
+	      	    	a.show();
+	      	}
 	    	if(PSkladDao.select(textbox8.getText(),label1,flag)==true) {
 	    		Alert a = new Alert(AlertType.INFORMATION);
 	 	    	a.setContentText("There is a order with that name! Please add another name for orders.");
