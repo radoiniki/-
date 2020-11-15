@@ -235,7 +235,7 @@ public static boolean updatemoney(String priceorder,Label label1,boolean flag) {
 	   try {
 		 Connection com= DostavchikDao.getConnection();
 			Statement st=com.createStatement();
-			ResultSet rs=st.executeQuery("update moneydesk set money_costs=money_costs+'"+priceorder+"' where money_id='"+1+"'");
+			ResultSet rs=st.executeQuery("update moneydesk set money_income=money_income+'"+priceorder+"' where money_id='"+1+"'");
 			if (rs.next())  
 			{
 			    label1.setText("Updated");
@@ -256,7 +256,7 @@ public static boolean updatemoney1(String name,Label label1,boolean flag) {
 	   try {
 		 Connection com= DostavchikDao.getConnection();
 			Statement st=com.createStatement();
-			ResultSet rs=st.executeQuery("update moneydesk set money_costs=money_costs+(Select price from corder_price where client_orders_corder_id=(Select corder_id from client_orders where corder_name='"+name+"')) where money_id='"+1+"'");
+			ResultSet rs=st.executeQuery("update moneydesk set money_income=money_income+(Select price from corder_price where client_orders_corder_id=(Select corder_id from client_orders where corder_name='"+name+"')) where money_id='"+1+"'");
 			if (rs.next())  
 			{
 			    label1.setText("Updated");

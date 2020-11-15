@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Optional;
 
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
@@ -13,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -135,8 +137,38 @@ public class PSklad {
     @FXML
     void Izpisvane(ActionEvent event) {
     	boolean flag=false;
-   	 if(PSkladDao.update2(textbox5.getText(),textbox8.getText(),label1,flag)==true) {
-   	 }
+    	if(Integer.parseInt(MainFromDao.pari())<1000) {
+    		Alert a = new Alert(Alert.AlertType.CONFIRMATION);
+ 	    	a.setContentText("WARNING! Money are lower than 1000! Money are:"+MainFromDao.pari() + "be careful");
+ 	    	Optional<ButtonType> result =a.showAndWait();
+ 	    	if(result.get() == ButtonType.OK)
+ 	    	{
+ 	    		 if(PSkladDao.update2(textbox5.getText(),textbox8.getText(),label1,flag)==true) {
+ 	    	   	 }
+ 	    	   	 if(PSkladDao.updatemoney(textbox4.getText(),label1,flag)==true) {
+
+ 	    	   	 }
+ 	    	   	 if(PSkladDao.updatemoney1(textbox8.getText(),label1,flag)==true) {
+
+ 	    	   	 }
+ 	    	}
+ 	    	else if(result.get() == ButtonType.CANCEL)
+ 	    	{
+ 	    	}
+    	}
+    	else {
+    		 if(PSkladDao.update2(textbox5.getText(),textbox8.getText(),label1,flag)==true) {
+	    	   	 }
+	    	   	 if(PSkladDao.updatemoney(textbox4.getText(),label1,flag)==true) {
+
+	    	   	 }
+	    	   	 if(PSkladDao.updatemoney1(textbox8.getText(),label1,flag)==true) {
+
+	    	   	 }
+    	}
+    	if(PSkladDao.updatekasa(label1,flag)==true) {
+
+	  	 }
     }
     
     @FXML
@@ -200,11 +232,11 @@ Platform.exit();
    		Connection com= DostavchikDao.getConnection();
    		try {
    			Statement st=com.createStatement();
-   			ResultSet rs=st.executeQuery("Select *FROM warehouse_orders w join worder_price p on w.worder_id=p.warehouse_orders_worder_id");
+   			ResultSet rs=st.executeQuery("Select *FROM warehouse_orders w join worder_price p on w.worder_id=p.warehouse_orders_worder_id join stocks s on p.stocks_st_id=s.st_id join suppliers su on w.sup_id=su.sup_id");
    			while (rs.next())  
    			{
    			
-   				oblist.add(new PSkladDao(rs.getString("worder_date"),Integer.parseInt(rs.getString("sup_id")),Integer.parseInt(rs.getString("worder_total")),rs.getString("worder_name"),Integer.parseInt(rs.getString("worder_id")),rs.getString("stocks_st_id"),rs.getString("w_quantity"),rs.getString("w_price_each")));
+   				oblist.add(new PSkladDao(rs.getString("worder_date"),rs.getString("sup_name"),Integer.parseInt(rs.getString("worder_total")),rs.getString("worder_name"),Integer.parseInt(rs.getString("worder_id")),rs.getString("st_name"),rs.getString("w_quantity"),rs.getString("w_price_each")));
    			 
    			}
    			
@@ -222,5 +254,9 @@ Platform.exit();
 	   priceach.setCellValueFactory(new PropertyValueFactory<>("priceeach"));
    	    table.setItems(oblist);
    	}
+  @FXML
+  void refresh(ActionEvent event) {
+initialize();
+  }
 
 }

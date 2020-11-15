@@ -20,7 +20,7 @@
       <TextField fx:id="textbox3" layoutX="102.0" layoutY="179.0" />
       <TextField fx:id="textbox4" layoutX="102.0" layoutY="209.0" />
       <TextField fx:id="textbox5" layoutX="102.0" layoutY="243.0" />
-      <TableView fx:id="table" layoutX="263.0" layoutY="100.0" prefHeight="232.0" prefWidth="457.0">
+      <TableView fx:id="table" layoutX="264.0" layoutY="111.0" prefHeight="232.0" prefWidth="457.0">
         <columns>
           <TableColumn fx:id="ime" editable="false" prefWidth="74.0" sortType="DESCENDING" text="Name" />
           <TableColumn fx:id="grad" editable="false" prefWidth="76.0" sortType="DESCENDING" text="City" />
@@ -43,5 +43,6 @@
       <TextField fx:id="textbox6" layoutX="492.0" layoutY="380.0" />
       <Label layoutX="464.0" layoutY="380.0" prefHeight="22.0" prefWidth="28.0" text="ID:" />
       <Button fx:id="button5" layoutX="634.0" layoutY="372.0" mnemonicParsing="false" onAction="#Exit" prefHeight="38.0" prefWidth="97.0" text="Exit" />
+      <Button layoutX="624.0" layoutY="65.0" mnemonicParsing="false" onAction="#refresh" prefHeight="38.0" prefWidth="97.0" text="Refresh" />
    </children>
 </Pane>

@@ -184,4 +184,8 @@ Platform.exit();
 	    id.setCellValueFactory(new PropertyValueFactory<>("id1"));
 	    table.setItems(oblist);
 	}
+	  @FXML
+	    void refresh(ActionEvent event) {
+initialize();
+	    }
 }

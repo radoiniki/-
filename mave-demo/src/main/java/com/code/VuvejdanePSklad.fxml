@@ -23,12 +23,12 @@
       <TableView fx:id="table" layoutX="243.0" layoutY="97.0" prefHeight="321.0" prefWidth="663.0">
          <columns>
             <TableColumn fx:id="stockname" editable="false" prefWidth="84.0" sortType="DESCENDING" text="Stock Name" />
-            <TableColumn fx:id="date" editable="false" prefWidth="66.0" sortType="DESCENDING" text="Date" />
-            <TableColumn fx:id="supname" editable="false" prefWidth="97.0" sortType="DESCENDING" text="Supplier Name" />
-            <TableColumn fx:id="orderprice" editable="false" prefWidth="101.0" sortType="DESCENDING" text="Price order" />
-            <TableColumn fx:id="quantity" editable="false" prefWidth="94.0" sortType="DESCENDING" text="Stock Quantity" />
-            <TableColumn fx:id="priceach" minWidth="8.0" prefWidth="83.0" text="Price for each" />
-            <TableColumn fx:id="id" minWidth="0.0" prefWidth="60.0" text="ID" />
+            <TableColumn fx:id="date" editable="false" prefWidth="94.0" sortType="DESCENDING" text="Date" />
+            <TableColumn fx:id="supname" editable="false" prefWidth="104.0" sortType="DESCENDING" text="Supplier Name" />
+            <TableColumn fx:id="orderprice" editable="false" prefWidth="78.0" sortType="DESCENDING" text="Price order" />
+            <TableColumn fx:id="quantity" editable="false" prefWidth="91.0" sortType="DESCENDING" text="Stock Quantity" />
+            <TableColumn fx:id="priceach" minWidth="8.0" text="Price for each" />
+            <TableColumn fx:id="id" minWidth="0.0" prefWidth="54.0" text="ID" />
             <TableColumn fx:id="name" prefWidth="75.0" text="Order Name" />
          </columns>
       </TableView>
@@ -50,5 +50,6 @@
       <TextField fx:id="textbox8" layoutX="102.0" layoutY="320.0" />
       <Label layoutX="22.0" layoutY="320.0" prefHeight="22.0" prefWidth="66.0" text="Order name" />
       <Button layoutX="102.0" layoutY="361.0" mnemonicParsing="false" onAction="#Izpisvane" prefHeight="22.0" prefWidth="133.0" text="Приемане на стоката" />
+      <Button layoutX="809.0" layoutY="418.0" mnemonicParsing="false" onAction="#refresh" prefHeight="38.0" prefWidth="97.0" text="Refresh" />
    </children>
 </Pane>

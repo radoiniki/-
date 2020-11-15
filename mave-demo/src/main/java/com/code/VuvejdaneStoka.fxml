@@ -37,5 +37,6 @@
       <TextField fx:id="textbox6" layoutX="492.0" layoutY="380.0" />
       <Label layoutX="464.0" layoutY="380.0" prefHeight="22.0" prefWidth="28.0" text="ID:" />
       <Button fx:id="button5" layoutX="634.0" layoutY="372.0" mnemonicParsing="false" onAction="#Exit" prefHeight="38.0" prefWidth="97.0" text="Exit" />
+      <Button layoutX="577.0" layoutY="100.0" mnemonicParsing="false" onAction="#refresh" prefHeight="38.0" prefWidth="97.0" text="Refresh" />
    </children>
 </Pane>

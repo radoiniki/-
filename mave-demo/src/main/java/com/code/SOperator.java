@@ -224,4 +224,9 @@ Platform.exit();
     	    password.setCellValueFactory(new PropertyValueFactory<>("password"));
      	    table.setItems(oblist);
      	}
+    @FXML
+    void refresh(ActionEvent event) {
+   initialize();
+    }
+    
 }

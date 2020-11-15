@@ -287,4 +287,66 @@ System.out.println(e);
  	    	a.setContentText("Money are:"+MainFromDao.pari());
  	    	a.show();
 	    }
-    }
+	    @FXML
+	    void SpravkaDost(ActionEvent event) {
+	    	try {		
+		       	 Login.close();
+		   				FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SpravkaDost.fxml"));
+		   	    		   root1 = (Parent) fxmlLoader.load();
+		   	    		    Stage stage = new Stage();
+		   	    		    stage.setScene(new Scene(root1));  
+		   	    		    stage.show();	    		    	    		   
+		   			}
+		   catch (Exception e)
+		   	{
+		   System.out.println(e);
+		   	}
+	    }
+	    @FXML
+	    void SpravkaCl(ActionEvent event) {
+	    	try {		
+		       	 Login.close();
+		   				FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SpravkaKl.fxml"));
+		   	    		   root1 = (Parent) fxmlLoader.load();
+		   	    		    Stage stage = new Stage();
+		   	    		    stage.setScene(new Scene(root1));  
+		   	    		    stage.show();	    		    	    		   
+		   			}
+		   catch (Exception e)
+		   	{
+		   System.out.println(e);
+		   	}
+	    }
+	    @FXML
+	    void SpravkaPr(ActionEvent event) {
+	    	try {		
+		       	 Login.close();
+		   				FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SpravkaPr.fxml"));
+		   	    		   root1 = (Parent) fxmlLoader.load();
+		   	    		    Stage stage = new Stage();
+		   	    		    stage.setScene(new Scene(root1));  
+		   	    		    stage.show();	    		    	    		   
+		   			}
+		   catch (Exception e)
+		   	{
+		   System.out.println(e);
+		   	}
+	    }
+
+	    @FXML
+	    void SpravkaNa(ActionEvent event) {
+	    	try {		
+		       	 Login.close();
+		   				FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SpravkaNa.fxml"));
+		   	    		   root1 = (Parent) fxmlLoader.load();
+		   	    		    Stage stage = new Stage();
+		   	    		    stage.setScene(new Scene(root1));  
+		   	    		    stage.show();	    		    	    		   
+		   			}
+		   catch (Exception e)
+		   	{
+		   System.out.println(e);
+		   	}
+	    }
+	    }
+ 

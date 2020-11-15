@@ -183,5 +183,8 @@ ObservableList<DostavchikDao> oblist=FXCollections.observableArrayList();
 	     }
 	 	    initialize();
 	    }
-
+	    @FXML
+	    void refresh(ActionEvent event) {
+initialize();
+	    }
 } 

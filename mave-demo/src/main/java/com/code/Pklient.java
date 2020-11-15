@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Optional;
 
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
@@ -12,6 +13,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -208,11 +210,11 @@ Platform.exit();
      		Connection com= DostavchikDao.getConnection();
      		try {
      			Statement st=com.createStatement();
-     			ResultSet rs=st.executeQuery("Select *FROM client_orders w join corder_price p on w.corder_id=p.client_orders_corder_id");
+     			ResultSet rs=st.executeQuery("Select *FROM client_orders w join corder_price p on w.corder_id=p.client_orders_corder_id join stocks s on p.stocks_st_id=s.st_id join staff st on w.staff_id=st.staff_id join clients c on w.cl_id=c.cl_id");
      			while (rs.next())  
      			{
      			
-     				oblist.add(new PklientDao(rs.getString("stocks_st_id"),rs.getString("corder_date"),rs.getString("staff_id"),Integer.parseInt(rs.getString("corder_total")),Integer.parseInt(rs.getString("quantity")),Integer.parseInt(rs.getString("price_each")),rs.getString("corder_name"),rs.getString("cl_id"),Integer.parseInt(rs.getString("corder_id"))));
+     				oblist.add(new PklientDao(rs.getString("st_name"),rs.getString("corder_date"),rs.getString("staff_fullname"),Integer.parseInt(rs.getString("corder_total")),Integer.parseInt(rs.getString("quantity")),Integer.parseInt(rs.getString("price_each")),rs.getString("corder_name"),rs.getString("cl_name"),Integer.parseInt(rs.getString("corder_id"))));
      			 
      			}
      			
@@ -232,8 +234,33 @@ Platform.exit();
      	    table.setItems(oblist);
      	}
     @FXML
+    void refresh(ActionEvent event) {
+initialize();
+    }
+    @FXML
     void Izpisvane(ActionEvent event) {
     	boolean flag=false;
+    	if(Integer.parseInt(MainFromDao.stocks())<1000) {
+    		Alert a = new Alert(Alert.AlertType.CONFIRMATION);
+ 	    	a.setContentText("WARNING! Stocks are lower than 1000! Stocks are:"+MainFromDao.stocks() + "be careful");
+ 	    	Optional<ButtonType> result =a.showAndWait();
+ 	    	if(result.get() == ButtonType.OK)
+ 	    	{
+ 	    		 if(PklientDao.update2(textbox5.getText(),textbox8.getText(),label1,flag)==true) {
+
+ 	    	   	 }
+ 	    	   	 if(PklientDao.updatemoney(textbox4.getText(),label1,flag)==true) {
+
+ 	    	   	 }
+ 	    	   	 if(PklientDao.updatemoney1(textbox8.getText(),label1,flag)==true) {
+
+ 	    	   	 }
+ 	    	}
+ 	    	else if(result.get() == ButtonType.CANCEL)
+ 	    	{
+ 	    	}
+    	}
+    	else{
    	 if(PklientDao.update2(textbox5.getText(),textbox8.getText(),label1,flag)==true) {
 
    	 }
@@ -243,10 +270,10 @@ Platform.exit();
    	 if(PklientDao.updatemoney1(textbox8.getText(),label1,flag)==true) {
 
    	 }
-   	if(PklientDao.updatekasa(label1,flag)==true) {
-
-  	 }
+   	
     }
+    	if(PklientDao.updatekasa(label1,flag)==true) {
 
-
+     	 }
+}
 }

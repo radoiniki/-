@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.code.SpravkaKl">
+   <children>
+      <TableView fx:id="table" layoutX="133.0" layoutY="110.0" prefHeight="319.0" prefWidth="605.0">
+         <columns>
+            <TableColumn fx:id="stockname" editable="false" prefWidth="84.0" sortType="DESCENDING" text="Stock Name" />
+            <TableColumn fx:id="orderprice" editable="false" prefWidth="78.0" sortType="DESCENDING" text="Price" />
+            <TableColumn fx:id="quantity" editable="false" prefWidth="91.0" sortType="DESCENDING" text="Stock Quantity" />
+            <TableColumn fx:id="supname" editable="false" prefWidth="104.0" sortType="DESCENDING" text="Staff Name" />
+            <TableColumn fx:id="date" editable="false" prefWidth="94.0" sortType="DESCENDING" text="Date" />
+            <TableColumn fx:id="order" prefWidth="75.0" text="Order price" />
+            <TableColumn fx:id="clname" prefWidth="75.0" text="Client name" />
+         </columns>
+      </TableView>
+      <Label layoutX="42.0" layoutY="23.0" text="Справки за изписвания и клиент">
+         <font>
+            <Font size="45.0" />
+         </font>
+      </Label>
+      <Button layoutX="25.0" layoutY="459.0" mnemonicParsing="false" onAction="#back" prefHeight="39.0" prefWidth="100.0" text="Back" />
+      <Button layoutX="14.0" layoutY="162.0" mnemonicParsing="false" onAction="#show" prefHeight="39.0" prefWidth="100.0" text="Show" />
+   </children>
+</Pane>

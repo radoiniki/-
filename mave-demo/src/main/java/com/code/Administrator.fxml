@@ -70,12 +70,12 @@
             </Pane>
             <Pane fx:id="Pane5" layoutX="237.0" layoutY="310.0" prefHeight="121.0" prefWidth="415.0" visible="false">
                <children>
-                  <Button fx:id="button41" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0" text="За доставки и доставчици" />
-                  <Button fx:id="button42" layoutY="38.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0" text="За клиенти" />
-                  <Button fx:id="button43" layoutY="78.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0" text="Приходи,разходи,Печалба" />
+                  <Button fx:id="button41" mnemonicParsing="false" onAction="#SpravkaDost" prefHeight="32.0" prefWidth="200.0" text="За доставки и доставчици" />
+                  <Button fx:id="button42" layoutY="38.0" mnemonicParsing="false" onAction="#SpravkaCl" prefHeight="32.0" prefWidth="200.0" text="За изписване и клиенти" />
+                  <Button fx:id="button43" layoutY="78.0" mnemonicParsing="false" onAction="#SpravkaPr" prefHeight="32.0" prefWidth="200.0" text="Приходи,разходи,Печалба" />
                   <Button fx:id="button46" layoutX="209.0" layoutY="78.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0" text="Дейност на СО" />
                   <Button fx:id="button45" layoutX="209.0" layoutY="38.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0" text="Движение на парите" />
-                  <Button fx:id="button44" layoutX="209.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0" text="За наличности в склада" />
+                  <Button fx:id="button44" layoutX="209.0" mnemonicParsing="false" onAction="#SpravkaNa" prefHeight="32.0" prefWidth="200.0" text="За наличности в склада" />
                </children>
             </Pane>
          </children>

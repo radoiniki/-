@@ -23,7 +23,7 @@ public class PSkladDao {
 		return date;
 	}
 
-	public int getSupname() {
+	public  String getSupname() {
 		return supname;
 	}
 
@@ -41,12 +41,12 @@ public class PSkladDao {
 	}
 
 	public String date;
-	public int supname;
+	public String supname;
 	public int priceorder;
 	public String ordername;
 	public int worderid;
 	
-	public PSkladDao(String date, int supname, int priceorder, String ordername,int worderid,String stockid, String quantity, String priceeach) {
+	public PSkladDao(String date,  String supname, int priceorder, String ordername,int worderid,String stockid, String quantity, String priceeach) {
 		super();
 		this.date = date;
 		this.supname = supname;
@@ -225,6 +225,68 @@ public class PSkladDao {
 			    	System.out.println(e);
 			    		}
 		
+		return flag;
+	}
+	public static boolean updatemoney(String priceorder,Label label1,boolean flag) {
+		   try {
+			 Connection com= DostavchikDao.getConnection();
+				Statement st=com.createStatement();
+				ResultSet rs=st.executeQuery("update moneydesk set money_costs=money_costs+'"+priceorder+"' where money_id='"+1+"'");
+				if (rs.next())  
+				{
+				    label1.setText("Updated");
+				    flag=true;
+				}else {
+					label1.setText("Not Updated");
+					flag=false;
+				}
+			   	}
+			    catch (Exception e)
+			    		{
+			    	System.out.println(e);
+			    		}
+		
+		return flag;
+	}
+	public static boolean updatemoney1(String name,Label label1,boolean flag) {
+		   try {
+			 Connection com= DostavchikDao.getConnection();
+				Statement st=com.createStatement();
+				ResultSet rs=st.executeQuery("update moneydesk set money_costs=money_costs+(Select w_price from worder_price where warehouse_orders_worder_id=(Select worder_id from warehouse_orders where worder_name='"+name+"')) where money_id='"+1+"'");
+				if (rs.next())  
+				{
+				    label1.setText("Updated");
+				    flag=true;
+				}else {
+					label1.setText("Not Updated");
+					flag=false;
+				}
+			   	}
+			    catch (Exception e)
+			    		{
+			    	System.out.println(e);
+			    		}
+		
+		return flag;
+	}
+	public static boolean updatekasa(Label label1,boolean flag) {
+		 try {
+			 Connection com= DostavchikDao.getConnection();
+				Statement st=com.createStatement();
+				ResultSet rs=st.executeQuery("update moneydesk set money_profit=money_income-money_costs where money_id='"+1+"'");
+				if (rs.next())  
+				{
+				    label1.setText("Updated");
+				    flag=true;
+				}else {
+					label1.setText("Not Updated");
+					flag=false;
+				}
+			   	}
+			    catch (Exception e)
+			    		{
+			    	System.out.println(e);
+			    		}
 		return flag;
 	}
 	

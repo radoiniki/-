@@ -193,11 +193,11 @@ Platform.exit();
 		Connection com= DostavchikDao.getConnection();
 		try {
 			Statement st=com.createStatement();
-			ResultSet rs=st.executeQuery("Select *FROM staff");
+			ResultSet rs=st.executeQuery("Select *FROM staff s join position p on s.pos_id=p.pos_id");
 			while (rs.next())  
 			{
 			
-				oblist.add(new StaffDao(rs.getString("staff_fullname"),rs.getString("staff_city"),rs.getString("staff_address"),rs.getString("staff_phone"),rs.getString("staff_email"),rs.getString("staff_salary"),rs.getString("pos_id"),Integer.parseInt(rs.getString("staff_id"))));
+				oblist.add(new StaffDao(rs.getString("staff_fullname"),rs.getString("staff_city"),rs.getString("staff_address"),rs.getString("staff_phone"),rs.getString("staff_email"),rs.getString("staff_salary"),rs.getString("pos_name"),Integer.parseInt(rs.getString("staff_id"))));
 			 
 			}
 			
@@ -215,5 +215,8 @@ Platform.exit();
 	    pos_name.setCellValueFactory(new PropertyValueFactory<>("name"));
 	    table.setItems(oblist);
 	}
-
+ @FXML
+ void refresh(ActionEvent event) {
+initialize();
+ }
 }
