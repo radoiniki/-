@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.code.SpravkaDv">
+   <children>
+      <Label layoutX="107.0" layoutY="14.0" text="Движение на парите">
+         <font>
+            <Font size="45.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="27.0" layoutY="129.0" prefHeight="270.0" prefWidth="323.0">
+        <columns>
+          <TableColumn fx:id="salary" prefWidth="75.0" text="Salary" />
+          <TableColumn fx:id="orderprice" prefWidth="75.0" text="Order price" />
+            <TableColumn fx:id="stockprice" prefWidth="75.0" text="Stocks price" />
+        </columns>
+      </TableView>
+      <TableView fx:id="table1" layoutX="369.0" layoutY="129.0" prefHeight="270.0" prefWidth="323.0">
+        <columns>
+          <TableColumn fx:id="orderprice1" prefWidth="75.0" text="Order price" />
+          <TableColumn fx:id="stockprice1" prefWidth="75.0" text="Stocks price" />
+        </columns>
+      </TableView>
+      <Label layoutX="52.0" layoutY="94.0" prefHeight="26.0" prefWidth="273.0" text="Разход,които влиза в касата">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="369.0" layoutY="107.0" prefHeight="17.0" prefWidth="173.0" />
+      <Label layoutX="384.0" layoutY="86.0" prefHeight="43.0" prefWidth="293.0" text="Приход, които влиза в касата">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="299.0" layoutY="407.0" mnemonicParsing="false" onAction="#show" prefHeight="37.0" prefWidth="137.0" text="Show" />
+   </children>
+</Pane>

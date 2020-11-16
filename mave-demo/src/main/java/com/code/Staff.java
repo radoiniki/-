@@ -106,6 +106,11 @@ public class Staff {
 		
 	 
 	    }
+	 if(StaffDao.updatesalary(textbox7.getText(),label1,flag)==true) {
+			if(StaffDao.updatemoney(label1,flag)==true) {
+	 	      	 
+	    	 }
+  	 }
 	    }
 	    catch (Exception e)
 	    		{

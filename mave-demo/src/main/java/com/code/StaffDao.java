@@ -153,5 +153,45 @@ public class StaffDao {
 			    		}
 		return flag;
 	}
+	public static boolean updatesalary(String salary,Label label1,boolean flag) {
+		   try {
+			 Connection com= DostavchikDao.getConnection();
+				Statement st=com.createStatement();
+				ResultSet rs=st.executeQuery("update moneydesk set money_costs=money_costs+'"+salary+"' where money_id='"+1+"'");
+				if (rs.next())  
+				{
+				    label1.setText("Updated");
+				    flag=true;
+				}else {
+					label1.setText("Not Updated");
+					flag=false;
+				}
+			   	}
+			    catch (Exception e)
+			    		{
+			    	System.out.println(e);
+			    		}
+		return flag;
+	}
+	public static boolean updatemoney(Label label1,boolean flag) {
+		   try {
+			 Connection com= DostavchikDao.getConnection();
+				Statement st=com.createStatement();
+				ResultSet rs=st.executeQuery("update moneydesk set money_profit=money_income-money_costs where money_id='"+1+"'");
+				if (rs.next())  
+				{
+				    label1.setText("Updated");
+				    flag=true;
+				}else {
+					label1.setText("Not Updated");
+					flag=false;
+				}
+			   	}
+			    catch (Exception e)
+			    		{
+			    	System.out.println(e);
+			    		}
+		return flag;
+	}
 	
 }

@@ -114,16 +114,6 @@ public class MainForm{
     	}
     }
     @FXML
-    void showPane2(ActionEvent event) {
-    	if(Pane3.isVisible())
-    	{
-    	Pane3.setVisible(false);
-    	}
-    	else {
-     Pane3.setVisible(true);
-    	}
-    }
-    @FXML
     void showPane3(ActionEvent event) {
     	if(Pane4.isVisible())
     	{
@@ -338,6 +328,21 @@ System.out.println(e);
 	    	try {		
 		       	 Login.close();
 		   				FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SpravkaNa.fxml"));
+		   	    		   root1 = (Parent) fxmlLoader.load();
+		   	    		    Stage stage = new Stage();
+		   	    		    stage.setScene(new Scene(root1));  
+		   	    		    stage.show();	    		    	    		   
+		   			}
+		   catch (Exception e)
+		   	{
+		   System.out.println(e);
+		   	}
+	    }
+	    @FXML
+	    void SpravkaDv(ActionEvent event) {
+	    	try {		
+		       	 Login.close();
+		   				FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SpravkaDv.fxml"));
 		   	    		   root1 = (Parent) fxmlLoader.load();
 		   	    		    Stage stage = new Stage();
 		   	    		    stage.setScene(new Scene(root1));  
