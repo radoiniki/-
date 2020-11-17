@@ -91,17 +91,17 @@ public class SOperatorDao {
 			    		}
 		return flag;
 	}
-	public static boolean select(String email,Label label1,boolean flag) {
+	public static boolean selectusername(String username,Label label1,boolean flag) {
 		   try {
 			 Connection com= DostavchikDao.getConnection();
 				Statement st=com.createStatement();
-				ResultSet rs=st.executeQuery("Select op_email from warehouse_operator where op_email='"+email+"'");
+				ResultSet rs=st.executeQuery("Select username from user1");
 				if (rs.next())  
 				{
-				    label1.setText("Insert");
+				    label1.setText("this username is used from another operator! Please choose another one !");
 				    flag=true;
 				}else {
-					label1.setText("Not Inserted");
+					label1.setText("Not selected");
 					flag=false;
 				}
 			   	}

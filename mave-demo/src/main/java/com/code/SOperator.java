@@ -99,24 +99,27 @@ public class SOperator {
       	    	a.setContentText("Empty textfield");
       	    	a.show();
       	}
-if(SOperatorDao.select(textbox5.getText(),label1,flag)==true) {
-    		
- 	    }
-else {
-    	if(SOperatorDao.insert(textbox1.getText(),textbox2.getText(),textbox3.getText(),textbox4.getText(),textbox5.getText(),label1,flag)==true) {
-    		
- 	    }else {
- 	    	 Alert a = new Alert(AlertType.WARNING);
- 	    	a.setContentText("The information u add is incorrect! Please check your names");
- 	    	a.show();
- 	    }
-	 if(SOperatorDao.insert1(textbox7.getText(),textbox8.getText(),textbox5.getText(),label1,flag)==true) {
-    		
- 	    }else {
- 	    	 Alert a = new Alert(AlertType.WARNING);
- 	    	a.setContentText("The information u add is incorrect! Please check your names");
- 	    	a.show();
- 	    }
+if(SOperatorDao.selectusername(textbox7.getText(), label1, flag)==true)
+{
+	Alert a = new Alert(AlertType.WARNING);
+  	a.setContentText("Please choose another username that username is in use");
+  	a.show();
+
+}else {
+	if(SOperatorDao.insert(textbox1.getText(),textbox2.getText(),textbox3.getText(),textbox4.getText(),textbox5.getText(),label1,flag)==true) {
+		
+	    }else {
+	    	 Alert a = new Alert(AlertType.WARNING);
+	    	a.setContentText("The information u add is incorrect! Please check your names");
+	    	a.show();
+	    }
+ if(SOperatorDao.insert1(textbox7.getText(),textbox8.getText(),textbox5.getText(),label1,flag)==true) {
+		
+	    }else {
+	    	 Alert a = new Alert(AlertType.WARNING);
+	    	a.setContentText("The information u add is incorrect! Please check your names");
+	    	a.show();
+	    }
 }
 initialize();
     }

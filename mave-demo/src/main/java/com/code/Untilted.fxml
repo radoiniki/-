@@ -7,19 +7,19 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.code.Login">
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to right top, #49908a, #3d8176, #327262, #29634f, #21543c, #265b43, #2a614a, #2f6851, #438775, #5aa79b, #73c8c4, #90eaee);;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.code.Login">
    <children>
-      <Button fx:id="login" layoutX="118.0" layoutY="274.0" mnemonicParsing="false" onAction="#handlebuttonLogin" prefHeight="39.0" prefWidth="75.0" text="Login">
+      <Button fx:id="login" layoutX="118.0" layoutY="274.0" mnemonicParsing="false" onAction="#handlebuttonLogin" prefHeight="39.0" prefWidth="75.0" style="-fx-background-color: linear-gradient(to right top, #425517, #697946, #919e75, #bbc5a8, #e7eddc);;" text="Login">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button fx:id="reset" layoutX="217.0" layoutY="274.0" mnemonicParsing="false" onAction="#handlebuttonReset" prefHeight="39.0" prefWidth="75.0" text="Reset">
+      <Button fx:id="reset" layoutX="217.0" layoutY="274.0" mnemonicParsing="false" onAction="#handlebuttonReset" prefHeight="39.0" prefWidth="75.0" style="-fx-background-color: linear-gradient(to right top, #425517, #697946, #919e75, #bbc5a8, #e7eddc);;" text="Reset">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button fx:id="exit" layoutX="316.0" layoutY="274.0" mnemonicParsing="false" onAction="#handlebuttonExit" prefHeight="39.0" prefWidth="75.0" text="Exit">
+      <Button fx:id="exit" layoutX="316.0" layoutY="274.0" mnemonicParsing="false" onAction="#handlebuttonExit" prefHeight="39.0" prefWidth="75.0" style="-fx-background-color: linear-gradient(to right top, #425517, #697946, #919e75, #bbc5a8, #e7eddc);;" text="Exit">
          <font>
             <Font size="15.0" />
          </font>
@@ -34,7 +34,7 @@
             <Font size="15.0" />
          </font>
       </TextField>
-      <Label layoutX="124.0" layoutY="37.0" prefHeight="39.0" prefWidth="312.0" text="Login System">
+      <Label layoutX="124.0" layoutY="37.0" prefHeight="39.0" prefWidth="312.0" text="Login System" textFill="#fefffe">
          <font>
             <Font size="50.0" />
          </font>
