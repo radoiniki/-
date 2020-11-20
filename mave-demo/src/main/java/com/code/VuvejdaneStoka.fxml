@@ -8,15 +8,15 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.code.Stoka">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="745.0" style="-fx-background-color: linear-gradient(to right top, #425517, #697946, #919e75, #bbc5a8, #e7eddc);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.code.Stoka">
    <children>
       <Label layoutX="61.0" layoutY="119.0" text="Name" />
       <Label layoutX="52.0" layoutY="152.0" text="ExpDate" />
       <Label layoutX="51.0" layoutY="183.0" text="Quantity" />
-      <TextField fx:id="textbox1" layoutX="102.0" layoutY="115.0" />
-      <TextField fx:id="textbox2" layoutX="102.0" layoutY="148.0" />
-      <TextField fx:id="textbox3" layoutX="102.0" layoutY="179.0" />
-      <TableView fx:id="table" layoutX="263.0" layoutY="100.0" prefHeight="228.0" prefWidth="303.0">
+      <TextField fx:id="textbox1" layoutX="102.0" layoutY="115.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);" />
+      <TextField fx:id="textbox2" layoutX="102.0" layoutY="148.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);" />
+      <TextField fx:id="textbox3" layoutX="102.0" layoutY="179.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);" />
+      <TableView fx:id="table" layoutX="263.0" layoutY="100.0" prefHeight="228.0" prefWidth="303.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);">
          <columns>
             <TableColumn fx:id="ime" editable="false" prefWidth="74.0" sortType="DESCENDING" text="Name" />
             <TableColumn fx:id="expdate" editable="false" prefWidth="76.0" sortType="DESCENDING" text="ЕxpDate" />
@@ -24,19 +24,19 @@
             <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
          </columns>
       </TableView>
-      <Button fx:id="button2" layoutX="120.0" layoutY="372.0" mnemonicParsing="false" onAction="#Add" prefHeight="38.0" prefWidth="97.0" text="Add New" />
+      <Button fx:id="button2" layoutX="120.0" layoutY="372.0" mnemonicParsing="false" onAction="#Add" prefHeight="38.0" prefWidth="97.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);" text="Add New" />
       <Label layoutX="111.0" layoutY="14.0" text="Въвеждане на Стоки">
          <font>
             <Font size="45.0" />
          </font>
       </Label>
-      <Button fx:id="button1" layoutX="11.0" layoutY="372.0" mnemonicParsing="false" onAction="#Back" prefHeight="38.0" prefWidth="97.0" text="Back" />
-      <Button fx:id="button3" layoutX="236.0" layoutY="372.0" mnemonicParsing="false" onAction="#Edit" prefHeight="38.0" prefWidth="97.0" text="Edit by ID:" />
-      <Button fx:id="button4" layoutX="342.0" layoutY="372.0" mnemonicParsing="false" onAction="#Remove" prefHeight="38.0" prefWidth="97.0" text="Remove by ID:" />
+      <Button fx:id="button1" layoutX="11.0" layoutY="372.0" mnemonicParsing="false" onAction="#Back" prefHeight="38.0" prefWidth="97.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);" text="Back" />
+      <Button fx:id="button3" layoutX="236.0" layoutY="372.0" mnemonicParsing="false" onAction="#Edit" prefHeight="38.0" prefWidth="97.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);" text="Edit by ID:" />
+      <Button fx:id="button4" layoutX="342.0" layoutY="372.0" mnemonicParsing="false" onAction="#Remove" prefHeight="38.0" prefWidth="97.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);" text="Remove by ID:" />
       <Label fx:id="label1" layoutX="95.0" layoutY="279.0" />
       <TextField fx:id="textbox6" layoutX="492.0" layoutY="380.0" />
       <Label layoutX="464.0" layoutY="380.0" prefHeight="22.0" prefWidth="28.0" text="ID:" />
-      <Button fx:id="button5" layoutX="634.0" layoutY="372.0" mnemonicParsing="false" onAction="#Exit" prefHeight="38.0" prefWidth="97.0" text="Exit" />
-      <Button layoutX="577.0" layoutY="100.0" mnemonicParsing="false" onAction="#refresh" prefHeight="38.0" prefWidth="97.0" text="Refresh" />
+      <Button fx:id="button5" layoutX="634.0" layoutY="372.0" mnemonicParsing="false" onAction="#Exit" prefHeight="38.0" prefWidth="97.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);" text="Exit" />
+      <Button layoutX="577.0" layoutY="100.0" mnemonicParsing="false" onAction="#refresh" prefHeight="38.0" prefWidth="97.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);" text="Refresh" />
    </children>
 </Pane>

@@ -8,19 +8,19 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="991.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.code.Pklient">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="991.0" style="-fx-background-color: linear-gradient(to right top, #425517, #697946, #919e75, #bbc5a8, #e7eddc);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.code.Pklient">
    <children>
       <Label layoutX="37.0" layoutY="119.0" text="Stock Name" />
       <Label layoutX="54.0" layoutY="152.0" text="Date" />
       <Label layoutX="28.0" layoutY="183.0" text="Staff Name" />
       <Label layoutX="38.0" layoutY="213.0" text="Price order" />
       <Label layoutX="20.0" layoutY="247.0" text="Stock Quantity" />
-      <TextField fx:id="textbox1" layoutX="102.0" layoutY="115.0" />
-      <TextField fx:id="textbox2" layoutX="102.0" layoutY="148.0" />
-      <TextField fx:id="textbox3" layoutX="102.0" layoutY="179.0" />
-      <TextField fx:id="textbox4" layoutX="102.0" layoutY="209.0" />
-      <TextField fx:id="textbox5" layoutX="102.0" layoutY="243.0" />
-      <TableView fx:id="table" layoutX="243.0" layoutY="97.0" prefHeight="324.0" prefWidth="740.0">
+      <TextField fx:id="textbox1" layoutX="102.0" layoutY="115.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);" />
+      <TextField fx:id="textbox2" layoutX="102.0" layoutY="148.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);" />
+      <TextField fx:id="textbox3" layoutX="102.0" layoutY="179.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);" />
+      <TextField fx:id="textbox4" layoutX="102.0" layoutY="209.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);" />
+      <TextField fx:id="textbox5" layoutX="102.0" layoutY="243.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);" />
+      <TableView fx:id="table" layoutX="243.0" layoutY="97.0" prefHeight="324.0" prefWidth="740.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);">
          <columns>
             <TableColumn fx:id="stockname" editable="false" prefWidth="84.0" sortType="DESCENDING" text="Stock Name" />
             <TableColumn fx:id="date" editable="false" prefWidth="66.0" sortType="DESCENDING" text="Date" />
@@ -33,26 +33,26 @@
             <TableColumn fx:id="clname" prefWidth="75.0" text="Client Name" />
          </columns>
       </TableView>
-      <Button fx:id="button2" layoutX="128.0" layoutY="473.0" mnemonicParsing="false" onAction="#Add" prefHeight="38.0" prefWidth="97.0" text="Add New" />
+      <Button fx:id="button2" layoutX="128.0" layoutY="473.0" mnemonicParsing="false" onAction="#Add" prefHeight="38.0" prefWidth="97.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);" text="Add New" />
       <Label layoutX="111.0" layoutY="14.0" text="Въвеждане на Поръчка за клиент">
          <font>
             <Font size="45.0" />
          </font>
       </Label>
-      <Button fx:id="button1" layoutX="21.0" layoutY="473.0" mnemonicParsing="false" onAction="#Back" prefHeight="38.0" prefWidth="97.0" text="Back" />
-      <Button fx:id="button3" layoutX="235.0" layoutY="473.0" mnemonicParsing="false" onAction="#Edit" prefHeight="38.0" prefWidth="97.0" text="Edit by ID:" />
-      <Button fx:id="button4" layoutX="343.0" layoutY="473.0" mnemonicParsing="false" onAction="#Remove" prefHeight="38.0" prefWidth="97.0" text="Remove by ID:" />
+      <Button fx:id="button1" layoutX="21.0" layoutY="473.0" mnemonicParsing="false" onAction="#Back" prefHeight="38.0" prefWidth="97.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);" text="Back" />
+      <Button fx:id="button3" layoutX="235.0" layoutY="473.0" mnemonicParsing="false" onAction="#Edit" prefHeight="38.0" prefWidth="97.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);" text="Edit by ID:" />
+      <Button fx:id="button4" layoutX="343.0" layoutY="473.0" mnemonicParsing="false" onAction="#Remove" prefHeight="38.0" prefWidth="97.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);" text="Remove by ID:" />
       <Label fx:id="label1" layoutX="110.0" layoutY="399.0" prefHeight="28.0" prefWidth="133.0" />
       <TextField fx:id="textbox6" layoutX="495.0" layoutY="481.0" />
       <Label layoutX="452.0" layoutY="481.0" prefHeight="22.0" prefWidth="28.0" text="ID:" />
-      <Button fx:id="button5" layoutX="647.0" layoutY="473.0" mnemonicParsing="false" onAction="#Exit" prefHeight="38.0" prefWidth="97.0" text="Exit" />
+      <Button fx:id="button5" layoutX="647.0" layoutY="473.0" mnemonicParsing="false" onAction="#Exit" prefHeight="38.0" prefWidth="97.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);" text="Exit" />
       <Label layoutX="21.0" layoutY="286.0" text="Price for each" />
-      <TextField fx:id="textbox7" layoutX="102.0" layoutY="282.0" />
-      <TextField fx:id="textbox8" layoutX="102.0" layoutY="320.0" />
+      <TextField fx:id="textbox7" layoutX="102.0" layoutY="282.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);" />
+      <TextField fx:id="textbox8" layoutX="102.0" layoutY="320.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);" />
       <Label layoutX="22.0" layoutY="320.0" prefHeight="22.0" prefWidth="66.0" text="Order name" />
-      <TextField fx:id="textbox9" layoutX="102.0" layoutY="354.0" />
+      <TextField fx:id="textbox9" layoutX="102.0" layoutY="354.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);" />
       <Label layoutX="22.0" layoutY="358.0" prefHeight="14.0" prefWidth="66.0" text="Client Name" />
-      <Button layoutX="94.0" layoutY="399.0" mnemonicParsing="false" onAction="#Izpisvane" prefHeight="22.0" prefWidth="133.0" text="Изписване на стоката" />
-      <Button layoutX="886.0" layoutY="421.0" mnemonicParsing="false" onAction="#refresh" prefHeight="38.0" prefWidth="97.0" text="Refresh" />
+      <Button layoutX="94.0" layoutY="399.0" mnemonicParsing="false" onAction="#Izpisvane" prefHeight="22.0" prefWidth="133.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);" text="Изписване на стоката" />
+      <Button layoutX="886.0" layoutY="421.0" mnemonicParsing="false" onAction="#refresh" prefHeight="38.0" prefWidth="97.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);" text="Refresh" />
    </children>
 </Pane>
