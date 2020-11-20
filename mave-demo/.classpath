@@ -32,5 +32,6 @@
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry exported="true" kind="lib" path="C:/Program Files/Java/jre1.8.0_261/lib/ext/jfxrt.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/user/Downloads/vajni instrumenti/ojdbc6.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -1,70 +1,7 @@
-[TRACE] 2020-11-20 21:12:29.197 [JavaFX Application Thread] Log4j - This is trace message
-[INFO ] 2020-11-20 21:12:29.201 [JavaFX Application Thread] Log4j - This is information message
-[ERROR] 2020-11-20 21:12:29.201 [JavaFX Application Thread] Log4j - This is error message
-[WARN ] 2020-11-20 21:12:29.201 [JavaFX Application Thread] Log4j - This is warn message
-[FATAL] 2020-11-20 21:12:29.201 [JavaFX Application Thread] Log4j - This is fatal message
-
-
-[TRACE] 2020-11-20 21:12:45.788 [JavaFX Application Thread] Log4j - This is trace message
-[INFO ] 2020-11-20 21:12:45.792 [JavaFX Application Thread] Log4j - This is information message
-[ERROR] 2020-11-20 21:12:45.792 [JavaFX Application Thread] Log4j - This is error message
-[WARN ] 2020-11-20 21:12:45.792 [JavaFX Application Thread] Log4j - This is warn message
-[FATAL] 2020-11-20 21:12:45.792 [JavaFX Application Thread] Log4j - This is fatal message
-
-
-[TRACE] 2020-11-20 21:13:45.430 [JavaFX Application Thread] Log4j - This is trace message
-[INFO ] 2020-11-20 21:13:45.433 [JavaFX Application Thread] Log4j - This is information message
-[ERROR] 2020-11-20 21:13:45.433 [JavaFX Application Thread] Log4j - This is error message
-[WARN ] 2020-11-20 21:13:45.433 [JavaFX Application Thread] Log4j - This is warn message
-[FATAL] 2020-11-20 21:13:45.433 [JavaFX Application Thread] Log4j - This is fatal message
-
-
-[TRACE] 2020-11-20 21:26:45.673 [JavaFX Application Thread] Log4j - This is trace message
-[INFO ] 2020-11-20 21:26:45.706 [JavaFX Application Thread] Log4j - This is information message
-[ERROR] 2020-11-20 21:26:45.707 [JavaFX Application Thread] Log4j - This is error message
-[WARN ] 2020-11-20 21:26:45.707 [JavaFX Application Thread] Log4j - This is warn message
-[FATAL] 2020-11-20 21:26:45.707 [JavaFX Application Thread] Log4j - This is fatal message
-
-
-[TRACE] 2020-11-20 21:27:09.370 [JavaFX Application Thread] Log4j - This is trace message
-[INFO ] 2020-11-20 21:27:09.374 [JavaFX Application Thread] Log4j - This is information message
-[ERROR] 2020-11-20 21:27:09.374 [JavaFX Application Thread] Log4j - This is error message
-[WARN ] 2020-11-20 21:27:09.374 [JavaFX Application Thread] Log4j - This is warn message
-[FATAL] 2020-11-20 21:27:09.374 [JavaFX Application Thread] Log4j - This is fatal message
-
-
-[TRACE] 2020-11-20 21:38:03.239 [JavaFX Application Thread] Log4j - This is trace message
-[INFO ] 2020-11-20 21:38:03.242 [JavaFX Application Thread] Log4j - This is information message
-[ERROR] 2020-11-20 21:38:03.242 [JavaFX Application Thread] Log4j - This is error message
-[WARN ] 2020-11-20 21:38:03.242 [JavaFX Application Thread] Log4j - This is warn message
-[FATAL] 2020-11-20 21:38:03.243 [JavaFX Application Thread] Log4j - This is fatal message
-
-
-[TRACE] 2020-11-20 21:42:23.650 [JavaFX Application Thread] Log4j - This is trace message
-[INFO ] 2020-11-20 21:42:23.661 [JavaFX Application Thread] Log4j - This is information message
-[ERROR] 2020-11-20 21:42:23.661 [JavaFX Application Thread] Log4j - This is error message
-[WARN ] 2020-11-20 21:42:23.661 [JavaFX Application Thread] Log4j - This is warn message
-[FATAL] 2020-11-20 21:42:23.661 [JavaFX Application Thread] Log4j - This is fatal message
-
-
-[TRACE] 2020-11-20 21:43:59.033 [JavaFX Application Thread] Log4j - This is trace message
-[INFO ] 2020-11-20 21:43:59.036 [JavaFX Application Thread] Log4j - This is information message
-[ERROR] 2020-11-20 21:43:59.037 [JavaFX Application Thread] Log4j - This is error message
-[WARN ] 2020-11-20 21:43:59.037 [JavaFX Application Thread] Log4j - This is warn message
-[FATAL] 2020-11-20 21:43:59.037 [JavaFX Application Thread] Log4j - This is fatal message
-
-
-[TRACE] 2020-11-20 21:45:36.393 [JavaFX Application Thread] Log4j - This is trace message
-[INFO ] 2020-11-20 21:45:36.397 [JavaFX Application Thread] Log4j - This is information message
-[ERROR] 2020-11-20 21:45:36.397 [JavaFX Application Thread] Log4j - This is error message
-[WARN ] 2020-11-20 21:45:36.397 [JavaFX Application Thread] Log4j - This is warn message
-[FATAL] 2020-11-20 21:45:36.397 [JavaFX Application Thread] Log4j - This is fatal message
-
-
-[TRACE] 2020-11-20 21:47:29.842 [JavaFX Application Thread] Log4j - This is trace message
-[INFO ] 2020-11-20 21:47:29.846 [JavaFX Application Thread] Log4j - This is information message
-[ERROR] 2020-11-20 21:47:29.853 [JavaFX Application Thread] Log4j - This is error message
-[WARN ] 2020-11-20 21:47:29.853 [JavaFX Application Thread] Log4j - This is warn message
-[FATAL] 2020-11-20 21:47:29.854 [JavaFX Application Thread] Log4j - This is fatal message
+[TRACE] 2020-11-20 23:39:53.995 [JavaFX Application Thread] LoggerClass - This is trace message
+[INFO ] 2020-11-20 23:39:53.999 [JavaFX Application Thread] LoggerClass - This is information message
+[ERROR] 2020-11-20 23:39:53.999 [JavaFX Application Thread] LoggerClass - This is error message
+[WARN ] 2020-11-20 23:39:53.999 [JavaFX Application Thread] LoggerClass - This is warn message
+[FATAL] 2020-11-20 23:39:53.999 [JavaFX Application Thread] LoggerClass - This is fatal message
 
 

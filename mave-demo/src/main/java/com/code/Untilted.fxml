@@ -9,17 +9,17 @@
 
 <Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to right top, #2d3d3c, #445658, #5d7176, #798c95, #98a8b5, #98a8b5, #99a8b5, #99a8b5, #7b8c95, #607176, #475658, #313d3c);;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.code.Login">
    <children>
-      <Button fx:id="login" layoutX="118.0" layoutY="274.0" mnemonicParsing="false" onAction="#handlebuttonLogin" prefHeight="39.0" prefWidth="75.0" style="-fx-background-color: linear-gradient(to right top, #425517, #697946, #919e75, #bbc5a8, #e7eddc);;" text="Login">
+      <Button fx:id="login" layoutX="118.0" layoutY="274.0" mnemonicParsing="false" onAction="#handlebuttonLogin" prefHeight="39.0" prefWidth="75.0" style="-fx-background-color: linear-gradient(to right top, #425518, #697946, #919e76, #bbc5a8, #e7eddc);;" text="Login">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button fx:id="reset" layoutX="217.0" layoutY="274.0" mnemonicParsing="false" onAction="#handlebuttonReset" prefHeight="39.0" prefWidth="75.0" style="-fx-background-color: linear-gradient(to right top, #425517, #697946, #919e75, #bbc5a8, #e7eddc);;" text="Reset">
+      <Button fx:id="reset" layoutX="217.0" layoutY="274.0" mnemonicParsing="false" onAction="#handlebuttonReset" prefHeight="39.0" prefWidth="75.0" style="-fx-background-color: linear-gradient(to right top, #425518, #697946, #919e76, #bbc5a8, #e7eddc);;" text="Reset">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button fx:id="exit" layoutX="316.0" layoutY="274.0" mnemonicParsing="false" onAction="#handlebuttonExit" prefHeight="39.0" prefWidth="75.0" style="-fx-background-color: linear-gradient(to right top, #425517, #697946, #919e75, #bbc5a8, #e7eddc);;" text="Exit">
+      <Button fx:id="exit" layoutX="316.0" layoutY="274.0" mnemonicParsing="false" onAction="#handlebuttonExit" prefHeight="39.0" prefWidth="75.0" style="-fx-background-color: linear-gradient(to right top, #425518, #697946, #919e76, #bbc5a8, #e7eddc);;" text="Exit">
          <font>
             <Font size="15.0" />
          </font>
