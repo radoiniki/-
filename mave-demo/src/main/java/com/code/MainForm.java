@@ -9,7 +9,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.image.ImageView;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -103,9 +102,7 @@ public class MainForm{
     @FXML
     private Button button44;
 
-    @FXML
-    private ImageView imageview;
-    
+
     @FXML
     void showPane1(ActionEvent event) {
     	if(Pane2.isVisible())

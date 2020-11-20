@@ -2,79 +2,72 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="586.0" prefWidth="854.0" style="-fx-background-color: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.code.MainForm">
+<Pane fx:id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="559.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.code.MainForm">
    <children>
-      <Pane fx:id="Pane1" layoutY="82.0" prefHeight="511.0" prefWidth="854.0" style="-fx-background-color: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);;">
+      <Label layoutX="24.0" prefHeight="76.0" prefWidth="591.0" text="Информационна Система">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Pane fx:id="Pane1" layoutX="7.0" layoutY="85.0" prefHeight="467.0" prefWidth="664.0">
          <children>
-            <Button fx:id="button1" layoutX="3.0" layoutY="91.0" mnemonicParsing="false" onAction="#showPane1" prefHeight="59.0" prefWidth="227.0" style="-fx-background-color: linear-gradient(to right top, #b0aa29, #8cb044, #69b361, #45b47f, #21b299, #35ae93, #41aa8d, #4ba687, #6b9e68, #879351, #9f8647, #b1774b);;" text="Създаване на номенклатури">
+            <Button fx:id="button1" layoutX="3.0" layoutY="91.0" mnemonicParsing="false" onAction="#showPane1" prefHeight="59.0" prefWidth="227.0" text="Създаване на номенклатури">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Pane fx:id="Pane2" layoutX="251.0" layoutY="89.0" prefHeight="330.0" prefWidth="200.0" visible="false">
+            <Pane fx:id="Pane2" layoutX="251.0" layoutY="89.0" prefHeight="323.0" prefWidth="204.0" visible="false">
                <children>
-                  <Button fx:id="button12" layoutY="39.0" mnemonicParsing="false" onAction="#AddClients" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right top, #b0aa29, #8cb044, #69b361, #45b47f, #21b299, #35ae93, #41aa8d, #4ba687, #6b9e68, #879351, #9f8647, #b1774b);" text="Въвеждане на клиент" />
-                  <Button fx:id="button13" layoutY="80.0" mnemonicParsing="false" onAction="#AddStocks" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right top, #b0aa29, #8cb044, #69b361, #45b47f, #21b299, #35ae93, #41aa8d, #4ba687, #6b9e68, #879351, #9f8647, #b1774b);" text="Въвеждане на стоки" />
-                  <Button fx:id="button14" layoutY="119.0" mnemonicParsing="false" onAction="#AddKasa" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right top, #b0aa29, #8cb044, #69b361, #45b47f, #21b299, #35ae93, #41aa8d, #4ba687, #6b9e68, #879351, #9f8647, #b1774b);" text="Въвеждане на каса" />
-                  <Button fx:id="button11" mnemonicParsing="false" onAction="#AddSupplier" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right top, #b0aa29, #8cb044, #69b361, #45b47f, #21b299, #35ae93, #41aa8d, #4ba687, #6b9e68, #879351, #9f8647, #b1774b);" text="Въвеждане на доставчик" />
-                  <Button fx:id="button15" layoutY="158.0" mnemonicParsing="false" onAction="#AddStaff" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right top, #b0aa29, #8cb044, #69b361, #45b47f, #21b299, #35ae93, #41aa8d, #4ba687, #6b9e68, #879351, #9f8647, #b1774b);" text="Въвеждане на персонал" />
-                  <Button fx:id="button16" layoutY="198.0" mnemonicParsing="false" onAction="#AddPSklad" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right top, #b0aa29, #8cb044, #69b361, #45b47f, #21b299, #35ae93, #41aa8d, #4ba687, #6b9e68, #879351, #9f8647, #b1774b);" text="Въвеждане на поръчки за склада" />
-                  <Button fx:id="button17" layoutY="242.0" mnemonicParsing="false" onAction="#AddPKlient" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right top, #b0aa29, #8cb044, #69b361, #45b47f, #21b299, #35ae93, #41aa8d, #4ba687, #6b9e68, #879351, #9f8647, #b1774b);" text="Въвеждане на поръчки за клиенти" />
-                  <Button fx:id="button18" layoutY="282.0" mnemonicParsing="false" onAction="#AddSOperator" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right top, #b0aa29, #8cb044, #69b361, #45b47f, #21b299, #35ae93, #41aa8d, #4ba687, #6b9e68, #879351, #9f8647, #b1774b);" text="Въвеждане на складови оператори" />
+                  <Button fx:id="button12" layoutY="39.0" mnemonicParsing="false" onAction="#AddClients" prefHeight="32.0" prefWidth="200.0" text="Въвеждане на клиент" />
+                  <Button fx:id="button13" layoutY="80.0" mnemonicParsing="false" onAction="#AddStocks" prefHeight="32.0" prefWidth="200.0" text="Въвеждане на стоки" />
+                  <Button fx:id="button14" layoutY="119.0" mnemonicParsing="false" onAction="#AddKasa" prefHeight="32.0" prefWidth="200.0" text="Въвеждане на каса" />
+                  <Button fx:id="button11" mnemonicParsing="false" onAction="#AddSupplier" prefHeight="32.0" prefWidth="200.0" text="Въвеждане на доставчик" />
+                  <Button fx:id="button15" layoutY="158.0" mnemonicParsing="false" onAction="#AddStaff" prefHeight="32.0" prefWidth="200.0" text="Въвеждане на персонал" />
+                  <Button fx:id="button16" layoutY="198.0" mnemonicParsing="false" onAction="#AddPSklad" prefHeight="32.0" prefWidth="200.0" text="Въвеждане на поръчки за склада" />
+                  <Button fx:id="button17" layoutY="242.0" mnemonicParsing="false" onAction="#AddPKlient" prefHeight="32.0" prefWidth="200.0" text="Въвеждане на поръчки за клиенти" />
+                  <Button fx:id="button18" layoutY="282.0" mnemonicParsing="false" onAction="#AddSOperator" prefHeight="32.0" prefWidth="200.0" text="Въвеждане на складови оператори" />
                </children>
             </Pane>
-            <Label layoutX="69.0" layoutY="24.0" prefHeight="32.0" prefWidth="78.0" text="Меню" textFill="#fff2f2">
+            <Label layoutX="77.0" layoutY="14.0" prefHeight="32.0" prefWidth="78.0" text="Меню">
                <font>
                   <Font size="25.0" />
                </font>
             </Label>
-            <Button fx:id="button3" layoutX="3.0" layoutY="191.0" mnemonicParsing="false" onAction="#showPane3" prefHeight="59.0" prefWidth="227.0" style="-fx-background-color: linear-gradient(to right top, #b0aa29, #8cb044, #69b361, #45b47f, #21b299, #35ae93, #41aa8d, #4ba687, #6b9e68, #879351, #9f8647, #b1774b);;" text="Наблюдение за наличност">
+            <Button fx:id="button3" layoutX="3.0" layoutY="191.0" mnemonicParsing="false" onAction="#showPane3" prefHeight="59.0" prefWidth="227.0" text="Наблюдение за наличност">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button fx:id="button4" layoutX="3.0" layoutY="292.0" mnemonicParsing="false" onAction="#showPane4" prefHeight="59.0" prefWidth="227.0" style="-fx-background-color: linear-gradient(to right top, #b0aa29, #8cb044, #69b361, #45b47f, #21b299, #35ae93, #41aa8d, #4ba687, #6b9e68, #879351, #9f8647, #b1774b);;" text="Извеждане на справки">
+            <Button fx:id="button4" layoutX="3.0" layoutY="292.0" mnemonicParsing="false" onAction="#showPane4" prefHeight="59.0" prefWidth="227.0" text="Извеждане на справки">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button fx:id="button5" layoutX="3.0" layoutY="392.0" mnemonicParsing="false" onAction="#Exit" prefHeight="59.0" prefWidth="227.0" style="-fx-background-color: linear-gradient(to right top, #b0aa29, #8cb044, #69b361, #45b47f, #21b299, #35ae93, #41aa8d, #4ba687, #6b9e68, #879351, #9f8647, #b1774b);;" text="Изход">
+            <Button fx:id="button5" layoutX="3.0" layoutY="392.0" mnemonicParsing="false" onAction="#Exit" prefHeight="59.0" prefWidth="227.0" text="Изход">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
             <Pane fx:id="Pane4" layoutX="253.0" layoutY="191.0" prefHeight="93.0" prefWidth="200.0" visible="false">
                <children>
-                  <Button fx:id="button31" layoutY="6.0" mnemonicParsing="false" onAction="#nalichnoststoka" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right top, #b0aa29, #8cb044, #69b361, #45b47f, #21b299, #35ae93, #41aa8d, #4ba687, #6b9e68, #879351, #9f8647, #b1774b);" text="На стоки в склада" />
-                  <Button fx:id="button32" layoutY="48.0" mnemonicParsing="false" onAction="#nalichnostpari" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right top, #b0aa29, #8cb044, #69b361, #45b47f, #21b299, #35ae93, #41aa8d, #4ba687, #6b9e68, #879351, #9f8647, #b1774b);" text="На пари в касата" />
+                  <Button fx:id="button31" layoutY="6.0" mnemonicParsing="false" onAction="#nalichnoststoka" prefHeight="32.0" prefWidth="200.0" text="На стоки в склада" />
+                  <Button fx:id="button32" layoutY="48.0" mnemonicParsing="false" onAction="#nalichnostpari" prefHeight="32.0" prefWidth="200.0" text="На пари в касата" />
                </children>
             </Pane>
             <Pane fx:id="Pane5" layoutX="248.0" layoutY="291.0" prefHeight="121.0" prefWidth="415.0" visible="false">
                <children>
-                  <Button fx:id="button41" mnemonicParsing="false" onAction="#SpravkaDost" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right top, #b0aa29, #8cb044, #69b361, #45b47f, #21b299, #35ae93, #41aa8d, #4ba687, #6b9e68, #879351, #9f8647, #b1774b);" text="За доставки и доставчици" />
-                  <Button fx:id="button42" layoutY="38.0" mnemonicParsing="false" onAction="#SpravkaCl" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right top, #b0aa29, #8cb044, #69b361, #45b47f, #21b299, #35ae93, #41aa8d, #4ba687, #6b9e68, #879351, #9f8647, #b1774b);" text="За изписване и клиенти" />
-                  <Button fx:id="button43" layoutY="78.0" mnemonicParsing="false" onAction="#SpravkaPr" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right top, #b0aa29, #8cb044, #69b361, #45b47f, #21b299, #35ae93, #41aa8d, #4ba687, #6b9e68, #879351, #9f8647, #b1774b);" text="Приходи,разходи,Печалба" />
-                  <Button fx:id="button46" layoutX="209.0" layoutY="78.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right top, #b0aa29, #8cb044, #69b361, #45b47f, #21b299, #35ae93, #41aa8d, #4ba687, #6b9e68, #879351, #9f8647, #b1774b);" text="Дейност на СО" />
-                  <Button fx:id="button45" layoutX="209.0" layoutY="38.0" mnemonicParsing="false" onAction="#SpravkaDv" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right top, #b0aa29, #8cb044, #69b361, #45b47f, #21b299, #35ae93, #41aa8d, #4ba687, #6b9e68, #879351, #9f8647, #b1774b);" text="Движение на парите" />
-                  <Button fx:id="button44" layoutX="209.0" mnemonicParsing="false" onAction="#SpravkaNa" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right top, #b0aa29, #8cb044, #69b361, #45b47f, #21b299, #35ae93, #41aa8d, #4ba687, #6b9e68, #879351, #9f8647, #b1774b);" text="За наличности в склада" />
+                  <Button fx:id="button41" mnemonicParsing="false" onAction="#SpravkaDost" prefHeight="32.0" prefWidth="200.0" text="За доставки и доставчици" />
+                  <Button fx:id="button42" layoutY="38.0" mnemonicParsing="false" onAction="#SpravkaCl" prefHeight="32.0" prefWidth="200.0" text="За изписване и клиенти" />
+                  <Button fx:id="button43" layoutY="78.0" mnemonicParsing="false" onAction="#SpravkaPr" prefHeight="32.0" prefWidth="200.0" text="Приходи,разходи,Печалба" />
+                  <Button fx:id="button46" layoutX="209.0" layoutY="78.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0" text="Дейност на СО" />
+                  <Button fx:id="button45" layoutX="209.0" layoutY="38.0" mnemonicParsing="false" onAction="#SpravkaDv" prefHeight="32.0" prefWidth="200.0" text="Движение на парите" />
+                  <Button fx:id="button44" layoutX="209.0" mnemonicParsing="false" onAction="#SpravkaNa" prefHeight="32.0" prefWidth="200.0" text="За наличности в склада" />
                </children>
             </Pane>
-            <ImageView fx:id="imageview" fitHeight="356.0" fitWidth="391.0" layoutX="456.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@1.jpg" />
-               </image>
-            </ImageView>
          </children>
       </Pane>
-      <Label layoutX="138.0" layoutY="14.0" prefHeight="76.0" prefWidth="591.0" text="Информационна Система" textFill="#ebdcdc">
-         <font>
-            <Font size="50.0" />
-         </font>
-      </Label>
    </children>
 </Pane>

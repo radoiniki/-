@@ -77,15 +77,13 @@ public class Login{
 			    		    Stage stage = new Stage();
 			    		    stage.setScene(new Scene(root1)); 
 			    		    stage.show();  
-			    		    Log4j.Logger();
 					}else {
 						LoginStart.close();	
 						FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Administrator2.fxml"));
 			    		   root1 = (Parent) fxmlLoader.load();
 			    		    Stage stage = new Stage();
 			    		    stage.setScene(new Scene(root1)); 
-			    		    stage.show();
-			    		    Log4j.Logger();
+			    		    stage.show();  
 					}
 			    		
 					}

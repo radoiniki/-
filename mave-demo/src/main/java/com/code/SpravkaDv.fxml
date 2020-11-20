@@ -7,6 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
+
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.code.SpravkaDv">
    <children>
       <Label layoutX="107.0" layoutY="14.0" text="Движение на парите">
@@ -39,6 +40,5 @@
          </font>
       </Label>
       <Button layoutX="299.0" layoutY="407.0" mnemonicParsing="false" onAction="#show" prefHeight="37.0" prefWidth="137.0" text="Show" />
-      <Button layoutX="14.0" layoutY="425.0" mnemonicParsing="false" onAction="#back" prefHeight="39.0" prefWidth="100.0" text="Back" />
    </children>
 </Pane>
