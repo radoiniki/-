@@ -8,7 +8,7 @@ public class MainFromDao {
 public static String stocks() {
 	String a = "";
 	 try {
-	 Connection com= DostavchikDao.getConnection();
+		 Connection com= DostavchikDao.getConnection();
 		Statement st=com.createStatement();
 		ResultSet rs=st.executeQuery("Select sum(st_quantity) from stocks");
 		if (rs.next())  {

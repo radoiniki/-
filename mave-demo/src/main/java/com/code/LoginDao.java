@@ -4,7 +4,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
+import javafx.scene.control.Alert.AlertType;
 
 
 public class LoginDao extends MainForm{
@@ -31,7 +34,9 @@ public class LoginDao extends MainForm{
     			flag=true;   			
     		}
     		else {
-    			label.setText("Check username and password!");
+    			Alert a = new Alert(AlertType.INFORMATION);
+     	    	a.setContentText("Wrong username or password!");
+     	    	a.show();
     			flag=false;
             }
 		}
@@ -42,16 +47,14 @@ public class LoginDao extends MainForm{
 		return flag;
 	
 	}
-	public boolean validateLogin1(String username1,String password1,Label label,boolean flag) {
+	public boolean validateLogin1(String username1,String password1,boolean flag) {
 		if(username1.equals("admin") && password1.contentEquals("admin"))
 		{
-    			label.setText("Logged in as Administrator!");
-    			flag=true;   			
-    		}
-    		else {
-    			label.setText("Logged in as User!");
-    			flag=false;
-            }
+    		flag=true;   			
+    	}
+		else {
+			flag=false;
+        }
 		return flag;
 		}
 	

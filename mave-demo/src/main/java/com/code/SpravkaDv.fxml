@@ -7,21 +7,21 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.code.SpravkaDv">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="736.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.code.SpravkaDv">
    <children>
       <Label layoutX="107.0" layoutY="14.0" text="Движение на парите">
          <font>
             <Font size="45.0" />
          </font>
       </Label>
-      <TableView fx:id="table" layoutX="27.0" layoutY="129.0" prefHeight="270.0" prefWidth="323.0">
+      <TableView fx:id="table" layoutX="27.0" layoutY="129.0" prefHeight="270.0" prefWidth="323.0" style="-fx-background-color: linear-gradient(to right top, #425517, #697946, #919e75, #bbc5a8, #e7eddc);">
         <columns>
           <TableColumn fx:id="salary" prefWidth="75.0" text="Salary" />
           <TableColumn fx:id="orderprice" prefWidth="75.0" text="Order price" />
             <TableColumn fx:id="stockprice" prefWidth="75.0" text="Stocks price" />
         </columns>
       </TableView>
-      <TableView fx:id="table1" layoutX="369.0" layoutY="129.0" prefHeight="270.0" prefWidth="323.0">
+      <TableView fx:id="table1" layoutX="369.0" layoutY="129.0" prefHeight="270.0" prefWidth="323.0" style="-fx-background-color: linear-gradient(to right top, #425517, #697946, #919e75, #bbc5a8, #e7eddc);">
         <columns>
           <TableColumn fx:id="orderprice1" prefWidth="75.0" text="Order price" />
           <TableColumn fx:id="stockprice1" prefWidth="75.0" text="Stocks price" />
@@ -38,7 +38,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Button layoutX="299.0" layoutY="407.0" mnemonicParsing="false" onAction="#show" prefHeight="37.0" prefWidth="137.0" text="Show" />
-      <Button layoutX="14.0" layoutY="425.0" mnemonicParsing="false" onAction="#back" prefHeight="39.0" prefWidth="100.0" text="Back" />
+      <Button layoutX="299.0" layoutY="407.0" mnemonicParsing="false" onAction="#show" prefHeight="37.0" prefWidth="137.0" style="-fx-background-color: linear-gradient(to right top, #425517, #697946, #919e75, #bbc5a8, #e7eddc);" text="Show" />
+      <Button layoutX="14.0" layoutY="425.0" mnemonicParsing="false" onAction="#back" prefHeight="39.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to right top, #425517, #697946, #919e75, #bbc5a8, #e7eddc);" text="Back" />
    </children>
 </Pane>

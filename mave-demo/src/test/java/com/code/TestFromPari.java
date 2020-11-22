@@ -10,7 +10,7 @@ public class TestFromPari {
 	public void test() {
 		MainFromDao test = new MainFromDao();
 		String output=test.pari();
-		assertEquals("446",output);
+		assertEquals("-205",output);
 		
 	}
 

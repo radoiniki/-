@@ -1,4 +1,5 @@
 package com.code;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -45,8 +46,7 @@ public class Login{
     static Parent root1;
     @FXML
     void handlebuttonExit(ActionEvent event){
-    	Stage stage = (Stage) exit.getScene().getWindow();
-    	  stage.close();
+    	Platform.exit();
     	 
     }
     @FXML
@@ -69,7 +69,7 @@ public class Login{
     	try {
     			c.getConnection();				
 				if(c.validateLogin(username1,password1,label,flag)==true) {	
-					if(c.validateLogin1(username1, password1, label, flag)==true)
+					if(c.validateLogin1(username1, password1, flag)==true)
 					{
 					LoginStart.close();	
 						FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Administrator.fxml"));
@@ -85,6 +85,7 @@ public class Login{
 			    		    Stage stage = new Stage();
 			    		    stage.setScene(new Scene(root1)); 
 			    		    stage.show();  
+			    		    LoggerClass.Logger();
 					}
 			    		
 					}

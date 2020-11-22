@@ -7,10 +7,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.code.SpravkaDost">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="752.0" style="-fx-background-color: linear-gradient(to right top, #a1dfe9, #71cccd, #43b9ab, #19a582, #008f55, #0a8e50, #128d4a, #198c45, #2ea069, #47b48c, #65c7ad, #86dacb);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.code.SpravkaDost">
    <children>
-      <TableView fx:id="table" layoutX="146.0" layoutY="118.0" prefHeight="310.0" prefWidth="529.0">
+      <TableView fx:id="table" layoutX="146.0" layoutY="118.0" prefHeight="310.0" prefWidth="529.0" style="-fx-background-color: linear-gradient(to right top, #425517, #697946, #919e75, #bbc5a8, #e7eddc);">
          <columns>
             <TableColumn fx:id="stockname" editable="false" prefWidth="84.0" sortType="DESCENDING" text="Stock Name" />
             <TableColumn fx:id="orderprice" editable="false" prefWidth="78.0" sortType="DESCENDING" text="Price" />
@@ -25,7 +24,7 @@
             <Font size="45.0" />
          </font>
       </Label>
-      <Button layoutX="25.0" layoutY="459.0" mnemonicParsing="false" onAction="#back" prefHeight="39.0" prefWidth="100.0" text="Back" />
-      <Button layoutX="35.0" layoutY="163.0" mnemonicParsing="false" onAction="#show" prefHeight="39.0" prefWidth="100.0" text="Show" />
+      <Button layoutX="25.0" layoutY="459.0" mnemonicParsing="false" onAction="#back" prefHeight="39.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to right top, #425517, #697946, #919e75, #bbc5a8, #e7eddc);" text="Back" />
+      <Button layoutX="35.0" layoutY="163.0" mnemonicParsing="false" onAction="#show" prefHeight="39.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to right top, #425517, #697946, #919e75, #bbc5a8, #e7eddc);" text="Show" />
    </children>
 </Pane>
